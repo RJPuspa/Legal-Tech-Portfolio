@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legal Tech Specialist & Advocate | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of a Bar Council Advocate & Legal Tech Specialist engineering Python automation, web systems, and algorithmic governance frameworks."
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Theme Overlay & Ambient Lighting -->
+    <div class="bg-grid-overlay"></div>
+    <div class="glow-sphere sphere-1"></div>
+    <div class="glow-sphere sphere-2"></div>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="#" class="logo">&lt;<span class="brand-text">Legal</span><span class="highlight">Tech</span> /&gt;</a>
+        <nav class="nav-menu" id="nav-menu">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#expertise" class="nav-link">Expertise</a>
+          <a href="#projects" class="nav-link">Builds & Code</a>
+          <a href="#media" class="nav-link">Demos & Media</a>
+          <a href="#publications" class="nav-link">Research</a>
+          <a href="#contact" class="nav-link btn-glow">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <!-- Light / Dark Theme Switcher Button -->
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme">
+            <i class="fa-solid fa-moon" id="theme-icon"></i>
+          </button>
+          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <i class="fa-solid fa-scale-balanced"></i> Bar Council Advocate & Legal Tech Specialist
+          </div>
+          <h1>Engineering Software & Modern Legal Systems</h1>
+          <p class="hero-subtitle">
+            Fusing legal domain authority with modern software engineering. Specializing in Python legal automation, custom web interfaces, contract
+            parsing engines, and algorithmic governance.
+          </p>
+
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-number" data-target="100">0</span><span class="plus">+</span>
+              <span class="metric-label">Automated Workflows</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number" data-target="100">0</span><span class="plus">%</span>
+              <span class="metric-label">Regulatory Accuracy</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number" data-target="2">0</span><span class="plus"> Core</span>
+              <span class="metric-label">Domains: Law & Code</span>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-code"></i> Explore Technical Builds</a>
+            <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">BACKGROUND & SYNERGY</span>
+          <h2 class="section-title">Legal Precision Meets Tech Execution</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="card-icon"><i class="fa-solid fa-gavel"></i></div>
+            <h3>Legal Authority</h3>
+            <p>Registered Advocate with extensive expertise in statutory analysis, jurisprudence, constitutional rights, and legal compliance.</p>
+          </div>
+          <div class="about-card">
+            <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Legal Tech Engineering</h3>
+            <p>Hands-on software operations experience, writing Python & JavaScript code to build legal document engines and automated workflows.</p>
+          </div>
+          <div class="about-card">
+            <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+            <h3>Algorithmic Governance</h3>
+            <p>Analyzing automated decision systems, AI ethics, data privacy compliance, and statutory alignment for tech enterprise software.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section (Dynamic Filtering) -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">PORTFOLIO & BUILDS</span>
+          <h2 class="section-title">Software Builds & Tools</h2>
+        </div>
+
+        <div class="filter-controls">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="python">Python Tools</button>
+          <button class="filter-btn" data-filter="js">JavaScript & Web</button>
+          <button class="filter-btn" data-filter="governance">AI & Governance</button>
+        </div>
+
+        <div class="project-grid">
+          <!-- Project 1 -->
+          <div class="project-card" data-category="python">
+            <div class="project-media">
+              <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+                alt="Python Legal Generator"
+                loading="lazy"
+              />
+              <div class="media-overlay">
+                <a href="#" target="_blank" class="preview-btn"><i class="fa-brands fa-github"></i> Source Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-type">Python Utility</span>
+              <h3>Legal Document Generator</h3>
+              <p>
+                A Python backend tool that ingests structured data feeds and compiles customized legal agreements, petitions, and statutory forms
+                seamlessly.
+              </p>
+              <div class="project-tags"><span>Python 3</span> <span>Jinja2</span> <span>PDF Parsing</span></div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" data-category="js">
+            <div class="project-media">
+              <img
+                src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80"
+                alt="Statutory Search Helper"
+                loading="lazy"
+              />
+              <div class="media-overlay">
+                <a href="#" target="_blank" class="preview-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-type">Web Application</span>
+              <h3>Statutory Query & Search Engine</h3>
+              <p>
+                An interactive JavaScript web interface designed to search, query, filter, and cross-reference statutory acts and legal citations
+                instantly.
+              </p>
+              <div class="project-tags"><span>JavaScript</span> <span>HTML5/CSS3</span> <span>REST API</span></div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card" data-category="governance">
+            <div class="project-media">
+              <img
+                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
+                alt="AI Compliance Framework"
+                loading="lazy"
+              />
+              <div class="media-overlay">
+                <a href="#" target="_blank" class="preview-btn"><i class="fa-solid fa-book-bookmark"></i> View Framework</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-type">Governance Framework</span>
+              <h3>Algorithmic Compliance Matrix</h3>
+              <p>
+                A technical assessment framework mapping machine learning model parameters against data privacy statutes and constitutional rights.
+              </p>
+              <div class="project-tags"><span>AI Ethics</span> <span>Algorithmic Audit</span> <span>Legal Tech</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demos & Media Showcase -->
+    <section id="media" class="section bg-surface">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">DEMOS & VISUAL OVERVIEWS</span>
+          <h2 class="section-title">Legal Tech Workflows in Action</h2>
+        </div>
+
+        <div class="media-grid">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?controls=1"
+              title="Legal Automation Demo"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+            <div class="video-caption">
+              <h4><i class="fa-solid fa-play-circle"></i> Demonstration: Automated Document Generation</h4>
+              <p>Walkthrough of a Python script automatically extracting case variables and populating statutory agreements in real time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research & Publications -->
+    <section id="publications" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ACADEMIC & LEGAL RESEARCH</span>
+          <h2 class="section-title">Published Works & Articles</h2>
+        </div>
+
+        <div class="publication-list">
+          <article class="pub-card">
+            <div class="pub-badge"><i class="fa-solid fa-award"></i> Featured Legal Tech Research</div>
+            <h3>Algorithmic Accountability & Constitutional Safeguards in Digital Ecosystems</h3>
+            <p class="pub-abstract">
+              Exploring the structural design of automated decision-making systems, judicial oversight, liability mechanisms, and corporate legal
+              obligations under emerging technology regulations.
+            </p>
+            <div class="pub-footer">
+              <span class="pub-meta"><i class="fa-solid fa-calendar"></i> Research Publication</span>
+              <a href="#" class="pub-link">Read Research Paper <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-surface">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <span class="section-tag">GET IN TOUCH</span>
+            <h2>Let's Collaborate on Legal Tech Solutions</h2>
+            <p>Open for legal tech engineering, custom software builds, academic research, and strategic compliance consulting.</p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <span>Email Address</span>
+                  <p>your.email@example.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <span>Location</span>
+                  <p>Kathmandu, Nepal</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" target="_blank" aria-label="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <form id="portfolio-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required placeholder="John Doe" />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" required placeholder="john@example.com" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" required placeholder="Describe your legal tech project or inquiry..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+              <div id="form-status" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Legal Tech Advocate & Specialist. Built with native HTML5, CSS3, & JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
