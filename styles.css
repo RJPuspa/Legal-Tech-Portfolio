@@ -727,30 +727,119 @@ body {
   font-weight: 600;
 }
 
+/* ==========================================
+   ENHANCED SOCIAL BUTTONS & HOVER TOOLTIPS
+   ========================================== */
+
 .social-links {
   display: flex;
-  gap: 14px;
+  gap: 16px;
+  margin-top: 24px;
 }
 
-.social-links a {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
+.social-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-heading);
+  font-size: 1.25rem;
   text-decoration: none;
-  transition: var(--transition);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
 }
 
-.social-links a:hover {
+/* Base Hover Effects */
+.social-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Brand Specific Hover Colors */
+.social-btn.linkedin:hover {
+  background: #0a66c2;
+  border-color: #0a66c2;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(10, 102, 194, 0.4);
+}
+
+.social-btn.github:hover {
+  background: #24292e;
+  border-color: #24292e;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(36, 41, 46, 0.4);
+}
+
+[data-theme="light"] .social-btn.github:hover {
+  background: #000000;
+  border-color: #000000;
+}
+
+.social-btn.x-twitter:hover {
+  background: #000000;
+  border-color: #ffffff;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.social-btn.email:hover {
   background: var(--accent-blue);
   border-color: var(--accent-blue);
-  color: white;
-  transform: translateY(-2px);
+  color: #ffffff;
+  box-shadow: 0 8px 20px var(--accent-glow);
+}
+
+/* CUSTOM TOOLTIP STYLING */
+.social-btn::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: #1e293b;
+  color: #f8fafc;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+/* Tooltip Little Arrow */
+.social-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #1e293b transparent transparent transparent;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+/* Show Tooltip on Hover */
+.social-btn:hover::before,
+.social-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
 .contact-form-card {
