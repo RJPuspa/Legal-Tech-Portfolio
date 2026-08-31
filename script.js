@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeIcon = document.getElementById("theme-icon");
   const htmlElement = document.documentElement;
 
-  // Load saved preference or default to dark
   const savedTheme = localStorage.getItem("theme") || "dark";
   htmlElement.setAttribute("data-theme", savedTheme);
   updateThemeIcon(savedTheme);
@@ -26,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // 2. Mobile Navigation Menu Toggle
+  // 2. Mobile Navigation Toggle
   const navToggle = document.getElementById("nav-toggle");
   const navMenu = document.getElementById("nav-menu");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -46,7 +45,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 3. Animated Counter for Metrics
+  // 3. Dynamic Expertise Tab Switcher Logic
+  const expTabBtns = document.querySelectorAll(".exp-tab-btn");
+  const expTabContents = document.querySelectorAll(".exp-tab-content");
+
+  expTabBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Remove active state from all buttons & contents
+      expTabBtns.forEach((b) => b.classList.remove("active"));
+      expTabContents.forEach((c) => c.classList.remove("active"));
+
+      // Activate target button & content
+      btn.classList.add("active");
+      const targetTab = btn.getAttribute("data-tab");
+      const activeContent = document.getElementById(targetTab);
+      if (activeContent) {
+        activeContent.classList.add("active");
+      }
+    });
+  });
+
+  // 4. Animated Counters
   const metricNumbers = document.querySelectorAll(".metric-number");
   let animated = false;
 
@@ -76,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   runCounters();
 
-  // 4. Interactive Project Filtering
+  // 5. Interactive Project Category Filtering
   const filterBtns = document.querySelectorAll(".filter-btn");
   const projectCards = document.querySelectorAll(".project-card");
 
@@ -102,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 5. Contact Form Simulation
+  // 6. Contact Form Submission Handling
   const contactForm = document.getElementById("portfolio-form");
   const formStatus = document.getElementById("form-status");
 

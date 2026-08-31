@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body>
-    <!-- Theme Overlay & Ambient Lighting -->
+    <!-- Ambient Overlay Grid -->
     <div class="bg-grid-overlay"></div>
     <div class="glow-sphere sphere-1"></div>
     <div class="glow-sphere sphere-2"></div>
@@ -42,7 +42,6 @@
           <a href="#contact" class="nav-link btn-glow">Contact</a>
         </nav>
         <div class="nav-actions">
-          <!-- Light / Dark Theme Switcher Button -->
           <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme">
             <i class="fa-solid fa-moon" id="theme-icon"></i>
           </button>
@@ -118,7 +117,146 @@
       </div>
     </section>
 
-    <!-- Projects Section (Dynamic Filtering) -->
+    <!-- NEW DYNAMIC EXPERTISE SECTION -->
+    <section id="expertise" class="section bg-surface">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CORE CAPABILITIES & STACK</span>
+          <h2 class="section-title">Interactive Expertise Matrix</h2>
+        </div>
+
+        <!-- Expertise Navigation Tabs -->
+        <div class="expertise-tabs">
+          <button class="exp-tab-btn active" data-tab="tab-automation"><i class="fa-solid fa-gears"></i> Legal Automation</button>
+          <button class="exp-tab-btn" data-tab="tab-governance"><i class="fa-solid fa-shield-halved"></i> Algorithmic Governance</button>
+          <button class="exp-tab-btn" data-tab="tab-dev"><i class="fa-solid fa-code"></i> Full-Stack Engineering</button>
+        </div>
+
+        <!-- Tab Content 1: Legal Automation -->
+        <div class="exp-tab-content active" id="tab-automation">
+          <div class="expertise-display-grid">
+            <div class="expertise-info">
+              <h3>Automated Legal Engineering</h3>
+              <p>
+                Bridging statutory requirements with programmatic workflows to remove operational bottlenecks, reduce contract turnaround times, and
+                minimize legal error rates.
+              </p>
+              <ul class="exp-list">
+                <li><i class="fa-solid fa-check-circle"></i> Dynamic contract assembly using Jinja2 templates & Python backends.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Statutory document parsing & OCR extraction pipelines.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Automated clause cross-referencing and validation logic.</li>
+              </ul>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Python Legal Scripting (PyPDF, Docx, Jinja2)</span>
+                  <span>92%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Contract Lifecycle & Template Logic</span>
+                  <span>95%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 95%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Regex & Statutory Parsing</span>
+                  <span>88%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Content 2: Governance & Compliance -->
+        <div class="exp-tab-content" id="tab-governance">
+          <div class="expertise-display-grid">
+            <div class="expertise-info">
+              <h3>AI Ethics & Statutory Compliance</h3>
+              <p>
+                Ensuring complex computational systems, automated decision-making engines, and AI platforms align with statutory frameworks and data
+                privacy standards.
+              </p>
+              <ul class="exp-list">
+                <li><i class="fa-solid fa-check-circle"></i> Algorithmic bias audits and constitutional rights compliance.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Data privacy regulatory mapping (GDPR, Local Statutory Acts).</li>
+                <li><i class="fa-solid fa-check-circle"></i> Legal tech policy design & automated system risk assessment.</li>
+              </ul>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Algorithmic Auditing & Governance</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Data Privacy & Regulatory Mapping</span>
+                  <span>94%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 94%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Corporate Legal Operations</span>
+                  <span>89%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 89%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Content 3: Software Development -->
+        <div class="exp-tab-content" id="tab-dev">
+          <div class="expertise-display-grid">
+            <div class="expertise-info">
+              <h3>Modern Web Architecture</h3>
+              <p>
+                Crafting accessible, scalable, and responsive web platforms for legal query engines, search interfaces, and institutional databases.
+              </p>
+              <ul class="exp-list">
+                <li><i class="fa-solid fa-check-circle"></i> Modern frontend engineering with responsive CSS3 & JavaScript.</li>
+                <li><i class="fa-solid fa-check-circle"></i> RESTful API integration for fast legal search queries.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Version control, Git workflow, and automated CI/CD deployment.</li>
+              </ul>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Frontend Web Stack (HTML5, CSS3, ES6+ JS)</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>REST APIs & JSON Search Engines</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Git & Code Architecture</span>
+                  <span>88%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects" class="section">
       <div class="container">
         <div class="section-header">
