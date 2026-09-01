@@ -929,6 +929,71 @@ body {
 }
 
 /* ==========================================
+   PIPELINE VISUALIZER STYLES
+   ========================================== */
+.pipeline-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 28px;
+  margin-top: 30px;
+}
+
+.pipeline-header {
+  margin-bottom: 24px;
+}
+
+.pipeline-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.flow-step {
+  flex: 1;
+  min-width: 200px;
+  background: rgba(15, 23, 42, 0.3);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.step-icon {
+  font-size: 1.8rem;
+  color: var(--accent-blue);
+  margin-bottom: 10px;
+}
+
+.flow-step h4 {
+  color: var(--text-heading);
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.flow-step p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.flow-arrow {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .pipeline-flow {
+    flex-direction: column;
+  }
+  .flow-arrow {
+    transform: rotate(90deg);
+    margin: 8px 0;
+  }
+}
+
+/* ==========================================
    INTERACTIVE PLAYGROUND STYLES
    ========================================== */
 .playground-card {
