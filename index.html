@@ -257,6 +257,33 @@
           </div>
         </div>
       </div>
+      <div class="playground-card">
+        <div class="playground-header">
+          <h3><i class="fa-solid fa-terminal"></i> Interactive Legal Engine Playground</h3>
+          <p>Test the dynamic Python & JS clause parsing logic directly in your browser.</p>
+        </div>
+
+        <div class="playground-grid">
+          <div class="playground-input">
+            <label for="sample-contract">Sample Legal Text Input:</label>
+            <textarea id="sample-contract" rows="6">
+Party A: Apex Legal Tech Ltd.
+Party B: Global Tech Solutions Inc.
+Total Fee: $45,000 USD
+Date: 01 September 2026
+Jurisdiction: Kathmandu, Nepal</textarea
+            >
+            <button id="run-parser-btn" class="btn btn-primary btn-full" style="margin-top: 10px">
+              <i class="fa-solid fa-bolt"></i> Run Parser Engine
+            </button>
+          </div>
+
+          <div class="playground-output">
+            <label>Extracted Structured JSON Output:</label>
+            <pre id="json-output"><code>Click "Run Parser Engine" to extract data...</code></pre>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
