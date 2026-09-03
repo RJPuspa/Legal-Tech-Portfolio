@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* ==========================================================================
-     1. Light / Dark Theme Switcher Logic
-     ========================================================================== */
+  /* --------------------------------------------------------------------------
+     1. Theme Switcher Logic
+     -------------------------------------------------------------------------- */
   const themeToggleBtn = document.getElementById("theme-toggle");
   const themeIcon = document.getElementById("theme-icon");
   const htmlElement = document.documentElement;
@@ -23,16 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateThemeIcon(theme) {
     if (!themeIcon) return;
-    if (theme === "dark") {
-      themeIcon.className = "fa-solid fa-sun";
-    } else {
-      themeIcon.className = "fa-solid fa-moon";
-    }
+    themeIcon.className = theme === "dark" ? "fa-solid fa-sun" : "fa-solid fa-moon";
   }
 
-  /* ==========================================================================
-     2. Mobile Navigation Toggle & Active Scroll Spy
-     ========================================================================== */
+  /* --------------------------------------------------------------------------
+     2. Mobile Nav Toggle & ScrollSpy
+     -------------------------------------------------------------------------- */
   const navToggle = document.getElementById("nav-toggle");
   const navMenu = document.getElementById("nav-menu");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -52,11 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Highlight navigation link on page scroll (ScrollSpy)
+  // Active Link Highlight
   const sections = document.querySelectorAll("section[id]");
-  const handleScrollSpy = () => {
+  window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
-
     sections.forEach((current) => {
       const sectionHeight = current.offsetHeight;
       const sectionTop = current.offsetTop - 100;
@@ -68,13 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(`.nav-menu a[href*='${sectionId}']`)?.classList.remove("active");
       }
     });
-  };
+  });
 
-  window.addEventListener("scroll", handleScrollSpy);
-
-  /* ==========================================================================
-     3. Dynamic Expertise Tab Switcher Logic
-     ========================================================================== */
+  /* --------------------------------------------------------------------------
+     3. Expertise Tabs Logic
+     -------------------------------------------------------------------------- */
   const expTabBtns = document.querySelectorAll(".exp-tab-btn");
   const expTabContents = document.querySelectorAll(".exp-tab-content");
 
@@ -85,21 +78,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       btn.classList.add("active");
       const targetTab = btn.getAttribute("data-tab");
-      const activeContent = document.getElementById(targetTab);
-      if (activeContent) {
-        activeContent.classList.add("active");
-      }
+      document.getElementById(targetTab)?.classList.add("active");
     });
   });
 
-  /* ==========================================================================
-     4. Animated Counters via Intersection Observer
-     ========================================================================== */
-  const metricNumbers = document.querySelectorAll(".metric-number");
+  /* --------------------------------------------------------------------------
+     4. Animated Counter Logic (IntersectionObserver)
+     -------------------------------------------------------------------------- */
+  const metricValues = document.querySelectorAll(".m-val");
 
   const animateCounter = (counter) => {
     const target = +counter.getAttribute("data-target");
-    const speed = 40;
+    const speed = 30;
     const inc = Math.ceil(target / speed);
 
     const updateCount = () => {
@@ -114,26 +104,25 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCount();
   };
 
-  if (metricNumbers.length > 0) {
-    const observerOptions = {
-      threshold: 0.5,
-    };
+  if (metricValues.length > 0) {
+    const counterObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
 
-    const counterObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          animateCounter(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    metricNumbers.forEach((counter) => counterObserver.observe(counter));
+    metricValues.forEach((counter) => counterObserver.observe(counter));
   }
 
-  /* ==========================================================================
-     5. Interactive Project Category Filtering
-     ========================================================================== */
+  /* --------------------------------------------------------------------------
+     5. Project Category Filtering
+     -------------------------------------------------------------------------- */
   const filterBtns = document.querySelectorAll(".filter-btn");
   const projectCards = document.querySelectorAll(".project-card");
 
@@ -148,62 +137,29 @@ document.addEventListener("DOMContentLoaded", () => {
         const category = card.getAttribute("data-category");
         if (filter === "all" || category === filter) {
           card.style.display = "block";
-          requestAnimationFrame(() => {
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
-          });
         } else {
-          card.style.opacity = "0";
-          card.style.transform = "translateY(10px)";
-          setTimeout(() => {
-            card.style.display = "none";
-          }, 300);
+          card.style.display = "none";
         }
       });
     });
   });
 
-  /* ==========================================================================
-     6. Contact Form Submission Handling
-     ========================================================================== */
-  const contactForm = document.getElementById("portfolio-form");
-  const formStatus = document.getElementById("form-status");
-
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      if (formStatus) {
-        formStatus.style.color = "var(--accent-blue)";
-        formStatus.innerText = "Sending message...";
-      }
-
-      setTimeout(() => {
-        if (formStatus) {
-          formStatus.style.color = "var(--accent-emerald)";
-          formStatus.innerText = "Thank you! Message received.";
-        }
-        contactForm.reset();
-      }, 1200);
-    });
-  }
-
-  /* ==========================================================================
-     7. Live Interactive Legal Parser Playground
-     ========================================================================== */
+  /* --------------------------------------------------------------------------
+     6. Parser Playground Engine Logic
+     -------------------------------------------------------------------------- */
   const runBtn = document.getElementById("run-parser-btn");
   const textInput = document.getElementById("sample-contract");
   const jsonOutput = document.getElementById("json-output");
 
   if (runBtn && textInput && jsonOutput) {
     runBtn.addEventListener("click", () => {
-      const originalText = runBtn.innerText;
-      runBtn.innerText = "Processing...";
+      const originalText = runBtn.innerHTML;
+      runBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
       runBtn.disabled = true;
 
       setTimeout(() => {
         const rawText = textInput.value;
 
-        // Enhanced regex patterns matching dynamic inputs
         const partyAMatch = rawText.match(/Party\s*A:\s*([^\n;]+)/i);
         const partyBMatch = rawText.match(/Party\s*B:\s*([^\n;]+)/i);
         const feeMatch = rawText.match(/(?:Total\s*Fee|Consideration):\s*([^\n;]+)/i);
@@ -224,10 +180,29 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         jsonOutput.innerHTML = `<code>${JSON.stringify(extractedData, null, 4)}</code>`;
-
-        runBtn.innerText = originalText;
+        runBtn.innerHTML = originalText;
         runBtn.disabled = false;
       }, 400);
+    });
+  }
+
+  /* --------------------------------------------------------------------------
+     7. Contact Form Simulation
+     -------------------------------------------------------------------------- */
+  const contactForm = document.getElementById("portfolio-form");
+  const formStatus = document.getElementById("form-status");
+
+  if (contactForm && formStatus) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      formStatus.style.color = "var(--accent-blue)";
+      formStatus.innerText = "Sending message...";
+
+      setTimeout(() => {
+        formStatus.style.color = "var(--accent-emerald)";
+        formStatus.innerText = "Thank you! Message received.";
+        contactForm.reset();
+      }, 1000);
     });
   }
 });

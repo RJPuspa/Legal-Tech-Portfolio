@@ -29,73 +29,91 @@
     <div class="glow-sphere sphere-1"></div>
     <div class="glow-sphere sphere-2"></div>
 
-    <!-- Header Navigation -->
+    <!-- NAVBAR -->
     <header class="navbar">
       <div class="container nav-container">
-        <a href="#" class="logo">&lt;<span class="brand-text">Legal</span><span class="highlight">Tech</span> /&gt;</a>
+        <a href="#" class="logo">&lt;Legal<span class="highlight">Tech</span> /&gt;</a>
+
         <nav class="nav-menu" id="nav-menu">
           <a href="#about" class="nav-link">About</a>
           <a href="#expertise" class="nav-link">Expertise</a>
-          <a href="#projects" class="nav-link">Builds & Code</a>
-          <a href="#media" class="nav-link">Demos & Media</a>
+          <a href="#projects" class="nav-link">Builds &amp; Code</a>
+          <a href="#media" class="nav-link">Demos &amp; Media</a>
           <a href="#publications" class="nav-link">Research</a>
-          <a href="#contact" class="nav-link btn-glow">Contact</a>
         </nav>
+
         <div class="nav-actions">
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Light/Dark Theme">
-            <i class="fa-solid fa-moon" id="theme-icon"></i>
+          <a href="#contact" class="btn btn-glow">Contact</a>
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+            <i class="fa-solid fa-sun" id="theme-icon"></i>
           </button>
-          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
       </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- HERO SECTION -->
     <section class="hero">
-      <!-- Background Video Wrapper -->
-      <div class="hero-video-wrapper">
-        <video autoplay loop muted playsinline class="hero-bg-video">
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-screens-with-data-41551-large.mp4" type="video/mp4" />
-        </video>
-        <div class="video-overlay"></div>
-      </div>
-
-      <!-- Hero Content Container -->
-      <div class="container hero-container" style="position: relative; z-index: 1">
-        <div class="hero-content">
-          <div class="status-badge">
-            <span class="status-dot"></span>
-            <i class="fa-solid fa-scale-balanced"></i> Bar Council Advocate & Legal Tech Specialist
-          </div>
-
-          <div class="status-badge"><span class="pulsing-dot"></span> Available for Legal Tech Consulting & Research</div>
-
-          <h1>Engineering Software & Modern Legal Systems</h1>
-          <p class="hero-subtitle">
-            Fusing legal domain authority with modern software engineering. Specializing in Python legal automation, custom web interfaces, contract
-            parsing engines, and algorithmic governance.
-          </p>
-
-          <div class="hero-metrics">
-            <div class="metric-card">
-              <span class="metric-number" data-target="100">0</span><span class="plus">+</span>
-              <span class="metric-label">Automated Workflows</span>
+      <div class="container">
+        <div class="hero-grid">
+          <!-- LEFT COLUMN: Main Copy & CTA Buttons -->
+          <div class="hero-left">
+            <div class="status-badge-container">
+              <span class="status-badge"> <span class="pulsing-dot"></span> Bar Council Advocate &amp; Legal Tech Specialist </span>
+              <span class="status-badge"> <span class="pulsing-dot"></span> Available for Consulting &amp; Research </span>
             </div>
-            <div class="metric-card">
-              <span class="metric-number" data-target="100">0</span><span class="plus">%</span>
-              <span class="metric-label">Regulatory Accuracy</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-number" data-target="2">0</span><span class="plus"> Core</span>
-              <span class="metric-label">Domains: Law & Code</span>
+
+            <h1 class="hero-title">Engineering Software &amp;<br />Modern Legal Systems</h1>
+
+            <p class="hero-subtitle">
+              Fusing legal domain authority with modern software engineering. Specializing in Python legal automation, custom web interfaces, contract
+              parsing engines, and algorithmic governance.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary"> <i class="fa-solid fa-code"></i> Explore Technical Builds </a>
+              <a href="#contact" class="btn btn-outline"> <i class="fa-solid fa-paper-plane"></i> Get In Touch </a>
             </div>
           </div>
 
-          <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-code"></i> Explore Technical Builds</a>
-            <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
+          <!-- RIGHT COLUMN: Console Card (Fills Right Void Perfectly) -->
+          <div class="hero-right">
+            <div class="hero-console-card">
+              <div class="console-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="console-title">legal_engine.py</span>
+              </div>
+              <div class="console-body">
+                <pre><code><span class="kwd">import</span> legal_tech <span class="kwd">as</span> lt
+
+<span class="cmt"># Load legal pipeline configuration</span>
+engine = lt.Engine(domain=<span class="str">"Statutory"</span>)
+engine.bind_advocate_rules(bar_approved=<span class="kwd">True</span>)
+
+<span class="cmt"># Current System Status</span>
+status = engine.verify_integrity()
+<span class="kwd">print</span>(f<span class="str">"System Readiness: {status.score}%"</span>)
+<span class="cmt">&gt;&gt;&gt; System Readiness: 100% (Compliant)</span></code></pre>
+              </div>
+              <div class="console-metrics-row">
+                <div class="metric-mini">
+                  <span class="m-val" data-target="100">0</span><span class="m-unit">+</span>
+                  <span class="m-lbl">Workflows</span>
+                </div>
+                <div class="metric-mini">
+                  <span class="m-val" data-target="100">0</span><span class="m-unit">%</span>
+                  <span class="m-lbl">Accuracy</span>
+                </div>
+                <div class="metric-mini">
+                  <span class="m-val" data-target="2">0</span> <span class="m-unit">Core</span>
+                  <span class="m-lbl">Domains</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -105,7 +123,7 @@
     <section id="about" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">BACKGROUND & SYNERGY</span>
+          <span class="section-tag">BACKGROUND &amp; SYNERGY</span>
           <h2 class="section-title">Legal Precision Meets Tech Execution</h2>
         </div>
 
@@ -118,7 +136,9 @@
           <div class="about-card">
             <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
             <h3>Legal Tech Engineering</h3>
-            <p>Hands-on software operations experience, writing Python & JavaScript code to build legal document engines and automated workflows.</p>
+            <p>
+              Hands-on software operations experience, writing Python &amp; JavaScript code to build legal document engines and automated workflows.
+            </p>
           </div>
           <div class="about-card">
             <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
@@ -133,7 +153,7 @@
     <section id="expertise" class="section bg-surface">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">CORE CAPABILITIES & STACK</span>
+          <span class="section-tag">CORE CAPABILITIES &amp; STACK</span>
           <h2 class="section-title">Interactive Expertise Matrix</h2>
         </div>
 
@@ -154,8 +174,8 @@
                 minimize legal error rates.
               </p>
               <ul class="exp-list">
-                <li><i class="fa-solid fa-check-circle"></i> Dynamic contract assembly using Jinja2 templates & Python backends.</li>
-                <li><i class="fa-solid fa-check-circle"></i> Statutory document parsing & OCR extraction pipelines.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Dynamic contract assembly using Jinja2 templates &amp; Python backends.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Statutory document parsing &amp; OCR extraction pipelines.</li>
                 <li><i class="fa-solid fa-check-circle"></i> Automated clause cross-referencing and validation logic.</li>
               </ul>
             </div>
@@ -169,14 +189,14 @@
               </div>
               <div class="skill-item">
                 <div class="skill-header">
-                  <span>Contract Lifecycle & Template Logic</span>
+                  <span>Contract Lifecycle &amp; Template Logic</span>
                   <span>95%</span>
                 </div>
                 <div class="progress-bar"><div class="progress" style="width: 95%"></div></div>
               </div>
               <div class="skill-item">
                 <div class="skill-header">
-                  <span>Regex & Statutory Parsing</span>
+                  <span>Regex &amp; Statutory Parsing</span>
                   <span>88%</span>
                 </div>
                 <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
@@ -189,7 +209,7 @@
         <div class="exp-tab-content" id="tab-governance">
           <div class="expertise-display-grid">
             <div class="expertise-info">
-              <h3>AI Ethics & Statutory Compliance</h3>
+              <h3>AI Ethics &amp; Statutory Compliance</h3>
               <p>
                 Ensuring complex computational systems, automated decision-making engines, and AI platforms align with statutory frameworks and data
                 privacy standards.
@@ -197,20 +217,20 @@
               <ul class="exp-list">
                 <li><i class="fa-solid fa-check-circle"></i> Algorithmic bias audits and constitutional rights compliance.</li>
                 <li><i class="fa-solid fa-check-circle"></i> Data privacy regulatory mapping (GDPR, Local Statutory Acts).</li>
-                <li><i class="fa-solid fa-check-circle"></i> Legal tech policy design & automated system risk assessment.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Legal tech policy design &amp; automated system risk assessment.</li>
               </ul>
             </div>
             <div class="skill-bars">
               <div class="skill-item">
                 <div class="skill-header">
-                  <span>Algorithmic Auditing & Governance</span>
+                  <span>Algorithmic Auditing &amp; Governance</span>
                   <span>90%</span>
                 </div>
                 <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
               </div>
               <div class="skill-item">
                 <div class="skill-header">
-                  <span>Data Privacy & Regulatory Mapping</span>
+                  <span>Data Privacy &amp; Regulatory Mapping</span>
                   <span>94%</span>
                 </div>
                 <div class="progress-bar"><div class="progress" style="width: 94%"></div></div>
@@ -235,7 +255,7 @@
                 Crafting accessible, scalable, and responsive web platforms for legal query engines, search interfaces, and institutional databases.
               </p>
               <ul class="exp-list">
-                <li><i class="fa-solid fa-check-circle"></i> Modern frontend engineering with responsive CSS3 & JavaScript.</li>
+                <li><i class="fa-solid fa-check-circle"></i> Modern frontend engineering with responsive CSS3 &amp; JavaScript.</li>
                 <li><i class="fa-solid fa-check-circle"></i> RESTful API integration for fast legal search queries.</li>
                 <li><i class="fa-solid fa-check-circle"></i> Version control, Git workflow, and automated CI/CD deployment.</li>
               </ul>
@@ -250,14 +270,14 @@
               </div>
               <div class="skill-item">
                 <div class="skill-header">
-                  <span>REST APIs & JSON Search Engines</span>
+                  <span>REST APIs &amp; JSON Search Engines</span>
                   <span>85%</span>
                 </div>
                 <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
               </div>
               <div class="skill-item">
                 <div class="skill-header">
-                  <span>Git & Code Architecture</span>
+                  <span>Git &amp; Code Architecture</span>
                   <span>88%</span>
                 </div>
                 <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
@@ -282,7 +302,7 @@
             <div class="flow-step">
               <div class="step-icon"><i class="fa-solid fa-filter"></i></div>
               <h4>2. Regex Pattern Parsing</h4>
-              <p>Clause, party, fee, & jurisdiction extraction</p>
+              <p>Clause, party, fee, &amp; jurisdiction extraction</p>
             </div>
             <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
             <div class="flow-step">
@@ -297,7 +317,7 @@
         <div class="playground-card">
           <div class="playground-header">
             <h3><i class="fa-solid fa-terminal"></i> Interactive Legal Engine Playground</h3>
-            <p>Test the dynamic Python & JS clause parsing logic directly in your browser.</p>
+            <p>Test the dynamic Python &amp; JS clause parsing logic directly in your browser.</p>
           </div>
 
           <div class="playground-grid">
@@ -310,7 +330,7 @@ Total Fee: $35,000 USD
 Date: 01 September 2026
 Jurisdiction: Kathmandu, Nepal</textarea
               >
-              <button id="run-parser-btn" class="btn btn-primary btn-full" style="margin-top: 10px">
+              <button id="run-parser-btn" class="btn btn-primary btn-full" style="margin-top: 12px">
                 <i class="fa-solid fa-bolt"></i> Run Parser Engine
               </button>
             </div>
@@ -328,15 +348,15 @@ Jurisdiction: Kathmandu, Nepal</textarea
     <section id="projects" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">PORTFOLIO & BUILDS</span>
-          <h2 class="section-title">Software Builds & Tools</h2>
+          <span class="section-tag">PORTFOLIO &amp; BUILDS</span>
+          <h2 class="section-title">Software Builds &amp; Tools</h2>
         </div>
 
         <div class="filter-controls">
           <button class="filter-btn active" data-filter="all">All Projects</button>
           <button class="filter-btn" data-filter="python">Python Tools</button>
-          <button class="filter-btn" data-filter="js">JavaScript & Web</button>
-          <button class="filter-btn" data-filter="governance">AI & Governance</button>
+          <button class="filter-btn" data-filter="js">JavaScript &amp; Web</button>
+          <button class="filter-btn" data-filter="governance">AI &amp; Governance</button>
         </div>
 
         <div class="project-grid">
@@ -344,7 +364,7 @@ Jurisdiction: Kathmandu, Nepal</textarea
           <div class="project-card" data-category="python">
             <div class="project-media">
               <img
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
                 alt="Python Legal Generator"
                 loading="lazy"
               />
@@ -367,7 +387,7 @@ Jurisdiction: Kathmandu, Nepal</textarea
           <div class="project-card" data-category="js">
             <div class="project-media">
               <img
-                src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
                 alt="Statutory Search Helper"
                 loading="lazy"
               />
@@ -377,7 +397,7 @@ Jurisdiction: Kathmandu, Nepal</textarea
             </div>
             <div class="project-body">
               <span class="project-type">Web Application</span>
-              <h3>Statutory Query & Search Engine</h3>
+              <h3>Statutory Query &amp; Search Engine</h3>
               <p>
                 An interactive JavaScript web interface designed to search, query, filter, and cross-reference statutory acts and legal citations
                 instantly.
@@ -390,7 +410,7 @@ Jurisdiction: Kathmandu, Nepal</textarea
           <div class="project-card" data-category="governance">
             <div class="project-media">
               <img
-                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
                 alt="AI Compliance Framework"
                 loading="lazy"
               />
@@ -415,7 +435,7 @@ Jurisdiction: Kathmandu, Nepal</textarea
     <section id="media" class="section bg-surface">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">DEMOS & VISUAL OVERVIEWS</span>
+          <span class="section-tag">DEMOS &amp; VISUAL OVERVIEWS</span>
           <h2 class="section-title">Legal Tech Workflows in Action</h2>
         </div>
 
@@ -440,14 +460,14 @@ Jurisdiction: Kathmandu, Nepal</textarea
     <section id="publications" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">ACADEMIC & LEGAL RESEARCH</span>
-          <h2 class="section-title">Published Works & Articles</h2>
+          <span class="section-tag">ACADEMIC &amp; LEGAL RESEARCH</span>
+          <h2 class="section-title">Published Works &amp; Articles</h2>
         </div>
 
         <div class="publication-list">
           <article class="pub-card">
             <div class="pub-badge"><i class="fa-solid fa-award"></i> Featured Legal Tech Research</div>
-            <h3>Algorithmic Accountability & Constitutional Safeguards in Digital Ecosystems</h3>
+            <h3>Algorithmic Accountability &amp; Constitutional Safeguards in Digital Ecosystems</h3>
             <p class="pub-abstract">
               Exploring the structural design of automated decision-making systems, judicial oversight, liability mechanisms, and corporate legal
               obligations under emerging technology regulations.
@@ -488,41 +508,16 @@ Jurisdiction: Kathmandu, Nepal</textarea
             </div>
 
             <div class="social-links">
-              <!-- LinkedIn -->
-              <a
-                href="https://linkedin.com/in/YOUR-PROFILE"
-                target="_blank"
-                aria-label="LinkedIn"
-                class="social-btn linkedin"
-                data-tooltip="Connect on LinkedIn"
-              >
+              <a href="https://linkedin.com/in/YOUR-PROFILE" target="_blank" aria-label="LinkedIn" class="social-btn linkedin">
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
-
-              <!-- GitHub -->
-              <a
-                href="https://github.com/YOUR-USERNAME"
-                target="_blank"
-                aria-label="GitHub"
-                class="social-btn github"
-                data-tooltip="View GitHub Projects"
-              >
+              <a href="https://github.com/YOUR-USERNAME" target="_blank" aria-label="GitHub" class="social-btn github">
                 <i class="fa-brands fa-github"></i>
               </a>
-
-              <!-- X / Twitter -->
-              <a
-                href="https://x.com/YOUR-HANDLE"
-                target="_blank"
-                aria-label="X (Twitter)"
-                class="social-btn x-twitter"
-                data-tooltip="Follow on X (Twitter)"
-              >
+              <a href="https://x.com/YOUR-HANDLE" target="_blank" aria-label="X (Twitter)" class="social-btn x-twitter">
                 <i class="fa-brands fa-x-twitter"></i>
               </a>
-
-              <!-- Email Quick Link -->
-              <a href="mailto:your.email@example.com" aria-label="Email" class="social-btn email" data-tooltip="Send Direct Email">
+              <a href="mailto:your.email@example.com" aria-label="Email" class="social-btn email">
                 <i class="fa-solid fa-envelope"></i>
               </a>
             </div>
@@ -553,7 +548,7 @@ Jurisdiction: Kathmandu, Nepal</textarea
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2026 Legal Tech Advocate & Specialist. Built with native HTML5, CSS3, & JavaScript.</p>
+        <p>&copy; 2026 Legal Tech Advocate &amp; Specialist. Built with native HTML5, CSS3, &amp; JavaScript.</p>
       </div>
     </footer>
 
