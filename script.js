@@ -37,36 +37,71 @@ document.addEventListener("DOMContentLoaded", () => {
     navToggle.addEventListener("click", () => {
       navMenu.classList.toggle("active");
       const isOpen = navMenu.classList.contains("active");
+      navToggle.setAttribute("aria-expanded", isOpen);
       navToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
     });
 
     navLinks.forEach((link) => {
       link.addEventListener("click", () => {
         navMenu.classList.remove("active");
-        navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        if (navToggle) {
+          navToggle.setAttribute("aria-expanded", "false");
+          navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }
       });
     });
   }
 
   // Active Link Highlight
   const sections = document.querySelectorAll("section[id]");
-  window.addEventListener("scroll", () => {
+  const handleScrollSpy = () => {
     const scrollY = window.scrollY;
     sections.forEach((current) => {
       const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 100;
+      const sectionTop = current.offsetTop - 120;
       const sectionId = current.getAttribute("id");
 
+      const navItem = document.querySelector(`.nav-menu a[href*='${sectionId}']`);
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        document.querySelector(`.nav-menu a[href*='${sectionId}']`)?.classList.add("active");
+        navItem?.classList.add("active");
       } else {
-        document.querySelector(`.nav-menu a[href*='${sectionId}']`)?.classList.remove("active");
+        navItem?.classList.remove("active");
       }
     });
+  };
+
+  window.addEventListener("scroll", handleScrollSpy, { passive: true });
+
+  /* --------------------------------------------------------------------------
+     3. Dynamic Hover Text for Social Icons
+     -------------------------------------------------------------------------- */
+  const socialBtns = document.querySelectorAll(".social-btn");
+
+  socialBtns.forEach((btn) => {
+    // Extract label from data-tooltip, aria-label, or title
+    const tooltipText = btn.getAttribute("data-tooltip") || btn.getAttribute("aria-label") || btn.getAttribute("title") || "Link";
+
+    // Set attribute to trigger CSS tooltip
+    btn.setAttribute("data-tooltip", tooltipText);
+
+    // Mouse Enter / Focus
+    const showTooltip = () => {
+      btn.classList.add("tooltip-active");
+    };
+
+    // Mouse Leave / Blur
+    const hideTooltip = () => {
+      btn.classList.remove("tooltip-active");
+    };
+
+    btn.addEventListener("mouseenter", showTooltip);
+    btn.addEventListener("mouseleave", hideTooltip);
+    btn.addEventListener("focus", showTooltip);
+    btn.addEventListener("blur", hideTooltip);
   });
 
   /* --------------------------------------------------------------------------
-     3. Expertise Tabs Logic
+     4. Expertise Tabs Logic
      -------------------------------------------------------------------------- */
   const expTabBtns = document.querySelectorAll(".exp-tab-btn");
   const expTabContents = document.querySelectorAll(".exp-tab-content");
@@ -83,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* --------------------------------------------------------------------------
-     4. Animated Counter Logic (IntersectionObserver)
+     5. Animated Counter Logic (IntersectionObserver)
      -------------------------------------------------------------------------- */
   const metricValues = document.querySelectorAll(".m-val");
 
@@ -121,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* --------------------------------------------------------------------------
-     5. Project Category Filtering
+     6. Project Category Filtering
      -------------------------------------------------------------------------- */
   const filterBtns = document.querySelectorAll(".filter-btn");
   const projectCards = document.querySelectorAll(".project-card");
@@ -145,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* --------------------------------------------------------------------------
-     6. Parser Playground Engine Logic
+     7. Parser Playground Engine Logic
      -------------------------------------------------------------------------- */
   const runBtn = document.getElementById("run-parser-btn");
   const textInput = document.getElementById("sample-contract");
@@ -187,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* --------------------------------------------------------------------------
-     7. Contact Form Simulation
+     8. Contact Form Simulation
      -------------------------------------------------------------------------- */
   const contactForm = document.getElementById("portfolio-form");
   const formStatus = document.getElementById("form-status");

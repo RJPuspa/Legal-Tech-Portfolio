@@ -30,29 +30,33 @@
     <div class="glow-sphere sphere-2"></div>
 
     <!-- NAVBAR -->
-    <header class="navbar">
+    <nav class="navbar">
       <div class="container nav-container">
-        <a href="#" class="logo">&lt;Legal<span class="highlight">Tech</span> /&gt;</a>
+        <!-- Left Grouping: Logo + Links -->
+        <div class="nav-left-group">
+          <a href="#" class="logo">&lt;LegalTech /&gt;</a>
 
-        <nav class="nav-menu" id="nav-menu">
-          <a href="#about" class="nav-link">About</a>
-          <a href="#expertise" class="nav-link">Expertise</a>
-          <a href="#projects" class="nav-link">Builds &amp; Code</a>
-          <a href="#media" class="nav-link">Demos &amp; Media</a>
-          <a href="#publications" class="nav-link">Research</a>
-        </nav>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#expertise" class="nav-link">Expertise</a></li>
+            <li><a href="#projects" class="nav-link">Builds & Code</a></li>
+            <li><a href="#media" class="nav-link">Demos & Media</a></li>
+            <li><a href="#publications" class="nav-link">Research</a></li>
+          </ul>
+        </div>
 
+        <!-- Right Grouping: Action Buttons & Theme Switcher -->
         <div class="nav-actions">
           <a href="#contact" class="btn btn-glow">Contact</a>
           <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
             <i class="fa-solid fa-sun" id="theme-icon"></i>
           </button>
-          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu">
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
       </div>
-    </header>
+    </nav>
 
     <!-- HERO SECTION -->
     <section class="hero">
@@ -78,7 +82,7 @@
             </div>
           </div>
 
-          <!-- RIGHT COLUMN: Console Card (Fills Right Void Perfectly) -->
+          <!-- RIGHT COLUMN: Console Card -->
           <div class="hero-right">
             <div class="hero-console-card">
               <div class="console-header">
@@ -119,7 +123,7 @@ status = engine.verify_integrity()
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="section">
       <div class="container">
         <div class="section-header">
@@ -149,7 +153,7 @@ status = engine.verify_integrity()
       </div>
     </section>
 
-    <!-- Expertise Section -->
+    <!-- EXPERTISE SECTION -->
     <section id="expertise" class="section bg-surface">
       <div class="container">
         <div class="section-header">
@@ -344,7 +348,7 @@ Jurisdiction: Kathmandu, Nepal</textarea
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="section">
       <div class="container">
         <div class="section-header">
@@ -431,7 +435,7 @@ Jurisdiction: Kathmandu, Nepal</textarea
       </div>
     </section>
 
-    <!-- Demos & Media Showcase -->
+    <!-- DEMOS & MEDIA SHOWCASE -->
     <section id="media" class="section bg-surface">
       <div class="container">
         <div class="section-header">
@@ -440,23 +444,40 @@ Jurisdiction: Kathmandu, Nepal</textarea
         </div>
 
         <div class="media-grid">
-          <div class="video-container">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?controls=1"
-              title="Legal Automation Demo"
-              allowfullscreen
-              loading="lazy"
-            ></iframe>
-            <div class="video-caption">
-              <h4><i class="fa-solid fa-play-circle"></i> Demonstration: Automated Document Generation</h4>
-              <p>Walkthrough of a Python script automatically extracting case variables and populating statutory agreements in real time.</p>
+          <!-- Video Demo 1: Contract Automation -->
+          <div class="media-card">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?controls=1"
+                title="Legal Automation Demo"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="media-caption">
+              <h4><i class="fa-solid fa-play-circle"></i> Automated Document Generation Engine</h4>
+              <p>Walkthrough of a Python script extracting variables from contract templates and compiling statutory agreements in seconds.</p>
+            </div>
+          </div>
+
+          <!-- Video Demo 2: Regulatory Data Dashboard -->
+          <div class="media-card">
+            <div class="video-container">
+              <video controls poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=800&amp;q=80">
+                <source src="demo-preview.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="media-caption">
+              <h4><i class="fa-solid fa-chart-line"></i> Statutory Data &amp; Compliance Dashboard</h4>
+              <p>Visualizing real-time regulatory changes and statutory metrics using custom JavaScript charting libraries.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Research & Publications -->
+    <!-- RESEARCH & PUBLICATIONS -->
     <section id="publications" class="section">
       <div class="container">
         <div class="section-header">
@@ -481,7 +502,7 @@ Jurisdiction: Kathmandu, Nepal</textarea
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="section bg-surface">
       <div class="container">
         <div class="contact-wrapper">
@@ -545,7 +566,7 @@ Jurisdiction: Kathmandu, Nepal</textarea
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
         <p>&copy; 2026 Legal Tech Advocate &amp; Specialist. Built with native HTML5, CSS3, &amp; JavaScript.</p>
