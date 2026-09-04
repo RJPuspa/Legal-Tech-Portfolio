@@ -28,10 +28,18 @@
   --font-body: Arial, Helvetica, sans-serif;
   --font-code: Arial, Helvetica, sans-serif;
 
-  --nav-height: clamp(60px, 8vh, 72px);
+  --nav-height: clamp(75px, 9vh, 82px);
   --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  margin-right: 6.5rem;
+}
+
+.btn-glow {
+  margin-right: 4.5rem;
 }
 
 /* Enhanced Light Mode Theme with Green Mix */
@@ -331,6 +339,11 @@ textarea {
 
 .hero-right {
   width: 100%;
+  font-size: 1.05rem;
+  padding: 1.75rem 2rem;
+  border-radius: 12px;
+  max-width: 540px;
+  /* line-height: 1.6; */
 }
 
 .hero-metrics-card {
