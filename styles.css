@@ -774,97 +774,253 @@ textarea {
   font-weight: 600;
 }
 
-/* ==========================================================================
-   Media Showcase & Dynamic Video Embeds
-   ========================================================================== */
-.media-grid {
-  max-width: 900px;
-  margin: 0 auto;
-}
+/* --------------------------------------------------------------------------
+   4-Column Grid & Workflows Styling
+   -------------------------------------------------------------------------- */
 
-.video-container {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-}
-
-/* Fluid 16:9 Video Wrapper */
-.video-wrapper {
-  position: relative;
+/* Responsive Grid - 4 Columns on Large Screens */
+.media-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  background: #000;
+  margin-top: 2rem;
+  align-items: stretch;
 }
 
-.video-wrapper iframe,
-.video-wrapper video {
+/* Card Container */
+.media-card-v2 {
+  background: var(--bg-card, #121824);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.media-card-v2:hover {
+  transform: translateY(-4px);
+  border-color: #3b82f6;
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.15);
+}
+
+.card-badge {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  right: 10px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #38bdf8;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+/* Equal Height Inner Visual Displays */
+.terminal-preview-container,
+.workflow-flow-container,
+.research-spotlight-container,
+.video-container-v2 {
+  height: 200px;
+  background: #0f172a;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 1. Terminal Styling */
+.terminal-header {
+  background: #1e293b;
+  padding: 0.4rem 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 5px;
+}
+.terminal-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.terminal-dots .red {
+  background: #ef4444;
+}
+.terminal-dots .yellow {
+  background: #f59e0b;
+}
+.terminal-dots .green {
+  background: #10b981;
+}
+
+.terminal-title {
+  color: #94a3b8;
+  font-size: 0.7rem;
+  margin: 0 auto;
+  font-family: monospace;
+}
+
+.terminal-body {
+  padding: 0.85rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #e2e8f0;
+  font-family: "Fira Code", Consolas, monospace;
+  overflow-y: auto;
+}
+
+.code-comment {
+  color: #64748b;
+  font-style: italic;
+}
+.code-keyword {
+  color: #38bdf8;
+  font-weight: 600;
+}
+.code-str {
+  color: #f2994a;
+}
+.code-output {
+  color: #10b981;
+  font-weight: 600;
+  display: block;
+  margin-top: 0.35rem;
+}
+
+/* 2. Flowchart Diagram Styling */
+.workflow-flow-container {
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+}
+
+.flow-node {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #cbd5e1;
+  width: 85%;
+}
+
+.flow-node.highlight {
+  border-color: #3b82f6;
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.1);
+}
+.flow-node.success {
+  border-color: #10b981;
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.flow-connector {
+  font-size: 0.65rem;
+  color: #64748b;
+  margin: -2px 0;
+}
+
+/* 3. Research Spotlight Styling */
+.research-spotlight-container {
+  padding: 1rem;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+}
+
+.brief-tag {
+  font-size: 0.7rem;
+  color: #a855f7;
+  font-weight: 600;
+}
+
+.brief-title {
+  font-size: 0.85rem;
+  color: #f8fafc;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.brief-meta {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.brief-snippet {
+  font-size: 0.72rem;
+  color: #cbd5e1;
+  font-style: italic;
+  border-left: 2px solid #a855f7;
+  padding-left: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+/* 4. Video Box Styling */
+.video-container-v2 video {
   width: 100%;
   height: 100%;
-  border: none;
   object-fit: cover;
 }
 
-.video-caption {
-  padding: clamp(16px, 3vw, 24px);
-}
-
-.video-caption h4 {
-  color: var(--text-heading);
-  margin-bottom: 6px;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-.pub-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  padding: clamp(20px, 4vw, 36px);
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-}
-
-.pub-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(245, 158, 11, 0.1);
-  color: var(--accent-amber);
-  border: 1px solid rgba(245, 158, 11, 0.25);
-  padding: 4px 12px;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-
-.pub-card h3 {
-  color: var(--text-heading);
-  font-size: 1.35rem;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-.pub-footer {
+/* Captions Alignment */
+.media-caption {
+  padding: 1.1rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 24px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border-color);
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex-grow: 1;
 }
 
-.pub-link {
-  color: var(--accent-blue);
-  text-decoration: none;
-  font-weight: 700;
+.media-caption h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.media-caption h4 i {
+  color: #3b82f6;
+  font-size: 0.85rem;
+}
+
+.media-caption p {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Adjustments for Mobile & Tablets */
+@media (max-width: 1200px) {
+  .media-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .media-grid-4 {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==========================================================================

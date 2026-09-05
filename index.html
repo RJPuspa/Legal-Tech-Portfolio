@@ -481,38 +481,91 @@ Jurisdiction: Kathmandu, Nepal</textarea
     <section id="media" class="section bg-surface">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">DEMOS &amp; VISUAL OVERVIEWS</span>
-          <h2 class="section-title">Legal Tech Workflows in Action</h2>
+          <span class="section-tag">SYSTEM ARCHITECTURE &amp; WORKFLOWS</span>
+          <h2 class="section-title">Legal Tech Engineering Workflows</h2>
         </div>
 
-        <div class="media-grid">
-          <!-- Video Demo 1: Contract Automation -->
-          <div class="media-card">
-            <div class="video-container">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?controls=1"
-                title="Legal Automation Demo"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
+        <!-- 4-Column Grid Layout -->
+        <div class="media-grid-4">
+          <!-- Card 1: Terminal Parser Engine -->
+          <div class="media-card-v2">
+            <div class="card-badge">Python Engine</div>
+            <div class="terminal-preview-container">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="terminal-title">parser_engine.py</span>
+              </div>
+              <div class="terminal-body">
+                <pre><code><span class="code-comment"># Extract key clauses</span>
+<span class="code-keyword">import</span> legal_tech <span class="code-keyword">as</span> lt
+engine = lt.Engine()
+doc = engine.load(<span class="code-str">"contract.pdf"</span>)
+parties = doc.extract_parties()
+<span class="code-output">&gt;&gt;&gt; Status: 100% Compliant</span></code></pre>
+              </div>
             </div>
             <div class="media-caption">
-              <h4><i class="fa-solid fa-play-circle"></i> Automated Document Generation Engine</h4>
-              <p>Walkthrough of a Python script extracting variables from contract templates and compiling statutory agreements in seconds.</p>
+              <h4><i class="fa-solid fa-code"></i> Contract Parsing Engine</h4>
+              <p>Extracts parties, execution dates, and compliance metrics from unstructured legal documents.</p>
             </div>
           </div>
 
-          <!-- Video Demo 2: Regulatory Data Dashboard -->
-          <div class="media-card">
-            <div class="video-container">
+          <!-- Card 2: Interactive Compliance Flowchart -->
+          <div class="media-card-v2">
+            <div class="card-badge">Architecture</div>
+            <div class="workflow-flow-container">
+              <div class="flow-node">
+                <i class="fa-solid fa-file-contract"></i>
+                <span>Raw PDF Input</span>
+              </div>
+              <div class="flow-connector"><i class="fa-solid fa-chevron-down"></i></div>
+              <div class="flow-node highlight">
+                <i class="fa-solid fa-gears"></i>
+                <span>Rule Validation</span>
+              </div>
+              <div class="flow-connector"><i class="fa-solid fa-chevron-down"></i></div>
+              <div class="flow-node success">
+                <i class="fa-solid fa-file-invoice"></i>
+                <span>Structured JSON</span>
+              </div>
+            </div>
+            <div class="media-caption">
+              <h4><i class="fa-solid fa-diagram-project"></i> Statutory Audit Pipeline</h4>
+              <p>End-to-end data transformation pipeline converting text to structured compliance outputs.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Research & Citation Spotlight -->
+          <div class="media-card-v2">
+            <div class="card-badge">Legal Research</div>
+            <div class="research-spotlight-container">
+              <div class="brief-tag"><i class="fa-solid fa-scroll"></i> Paper Spotlight</div>
+              <h5 class="brief-title">Algorithmic Governance &amp; Constitutional Law</h5>
+              <p class="brief-meta">Q1 Journal Submission • Tech Governance Framework</p>
+              <div class="brief-snippet">"Examining procedural due process in administrative decision-making algorithms."</div>
+            </div>
+            <div class="media-caption">
+              <h4><i class="fa-solid fa-book-bookmark"></i> Academic Research Brief</h4>
+              <p>Publication focusing on statutory compliance and algorithmic accountability.</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Video / Visual Dashboard -->
+          <div class="media-card-v2">
+            <div class="card-badge">Data Visuals</div>
+            <div class="video-container-v2">
               <video controls poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=800&amp;q=80">
                 <source src="demo-preview.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
             <div class="media-caption">
-              <h4><i class="fa-solid fa-chart-line"></i> Statutory Data &amp; Compliance Dashboard</h4>
-              <p>Visualizing real-time regulatory changes and statutory metrics using custom JavaScript charting libraries.</p>
+              <h4><i class="fa-solid fa-chart-line"></i> Regulatory Dashboard</h4>
+              <p>Real-time tracking of statutory updates and regulatory metrics visualizer.</p>
             </div>
           </div>
         </div>
