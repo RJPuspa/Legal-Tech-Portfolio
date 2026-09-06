@@ -477,7 +477,7 @@ Jurisdiction: Kathmandu, Nepal</textarea
       </div>
     </section>
 
-    <!-- DEMOS & MEDIA SHOWCASE -->
+    <!-- DEMOS & SYSTEM ARCHITECTURE -->
     <section id="media" class="section bg-surface">
       <div class="container">
         <div class="section-header">
@@ -485,10 +485,10 @@ Jurisdiction: Kathmandu, Nepal</textarea
           <h2 class="section-title">Legal Tech Engineering Workflows</h2>
         </div>
 
-        <!-- 4-Column Grid Layout -->
-        <div class="media-grid-4">
+        <!-- 2x2 Responsive Grid Layout -->
+        <div class="showcase-grid-2x2">
           <!-- Card 1: Terminal Parser Engine -->
-          <div class="media-card-v2">
+          <div class="showcase-card">
             <div class="card-badge">Python Engine</div>
             <div class="terminal-preview-container">
               <div class="terminal-header">
@@ -500,62 +500,67 @@ Jurisdiction: Kathmandu, Nepal</textarea
                 <span class="terminal-title">parser_engine.py</span>
               </div>
               <div class="terminal-body">
-                <pre><code><span class="code-comment"># Extract key clauses</span>
+                <pre><code><span class="code-comment"># Extract key clauses &amp; metadata</span>
 <span class="code-keyword">import</span> legal_tech <span class="code-keyword">as</span> lt
-engine = lt.Engine()
-doc = engine.load(<span class="code-str">"contract.pdf"</span>)
+
+engine = lt.Engine(domain=<span class="code-str">"Statutory"</span>)
+doc = engine.load(<span class="code-str">"sample_contract.pdf"</span>)
 parties = doc.extract_parties()
-<span class="code-output">&gt;&gt;&gt; Status: 100% Compliant</span></code></pre>
+jurisdiction = doc.get_clause(<span class="code-str">"Jurisdiction"</span>)
+
+<span class="code-output">&gt;&gt;&gt; Status: COMPLIANT | Verification: 100%</span></code></pre>
               </div>
             </div>
             <div class="media-caption">
-              <h4><i class="fa-solid fa-code"></i> Contract Parsing Engine</h4>
-              <p>Extracts parties, execution dates, and compliance metrics from unstructured legal documents.</p>
+              <h4><i class="fa-solid fa-code"></i> Contract Parsing &amp; Extraction Engine</h4>
+              <p>Extracts parties, execution dates, jurisdiction clauses, and compliance metrics from unstructured legal documents.</p>
             </div>
           </div>
 
           <!-- Card 2: Interactive Compliance Flowchart -->
-          <div class="media-card-v2">
+          <div class="showcase-card">
             <div class="card-badge">Architecture</div>
             <div class="workflow-flow-container">
               <div class="flow-node">
                 <i class="fa-solid fa-file-contract"></i>
-                <span>Raw PDF Input</span>
+                <span>Unstructured PDF / Raw Text</span>
               </div>
               <div class="flow-connector"><i class="fa-solid fa-chevron-down"></i></div>
               <div class="flow-node highlight">
                 <i class="fa-solid fa-gears"></i>
-                <span>Rule Validation</span>
+                <span>Regex &amp; Rule Validation Engine</span>
               </div>
               <div class="flow-connector"><i class="fa-solid fa-chevron-down"></i></div>
               <div class="flow-node success">
                 <i class="fa-solid fa-file-invoice"></i>
-                <span>Structured JSON</span>
+                <span>Structured JSON &amp; Risk Metrics</span>
               </div>
             </div>
             <div class="media-caption">
               <h4><i class="fa-solid fa-diagram-project"></i> Statutory Audit Pipeline</h4>
-              <p>End-to-end data transformation pipeline converting text to structured compliance outputs.</p>
+              <p>End-to-end data transformation pipeline converting raw text to structured legal compliance outputs.</p>
             </div>
           </div>
 
           <!-- Card 3: Research & Citation Spotlight -->
-          <div class="media-card-v2">
+          <div class="showcase-card">
             <div class="card-badge">Legal Research</div>
             <div class="research-spotlight-container">
-              <div class="brief-tag"><i class="fa-solid fa-scroll"></i> Paper Spotlight</div>
-              <h5 class="brief-title">Algorithmic Governance &amp; Constitutional Law</h5>
-              <p class="brief-meta">Q1 Journal Submission • Tech Governance Framework</p>
-              <div class="brief-snippet">"Examining procedural due process in administrative decision-making algorithms."</div>
+              <div class="brief-tag"><i class="fa-solid fa-scroll"></i> Research Brief Spotlight</div>
+              <h5 class="brief-title">Algorithmic Governance &amp; Constitutional Due Process</h5>
+              <p class="brief-meta">Q1 Journal Working Paper • Tech Governance Framework</p>
+              <div class="brief-snippet">
+                "Examining procedural due process and constitutional safeguards in public sector decision-making algorithms."
+              </div>
             </div>
             <div class="media-caption">
               <h4><i class="fa-solid fa-book-bookmark"></i> Academic Research Brief</h4>
-              <p>Publication focusing on statutory compliance and algorithmic accountability.</p>
+              <p>Publication focusing on statutory compliance, due process, and algorithmic accountability in public systems.</p>
             </div>
           </div>
 
-          <!-- Card 4: Video / Visual Dashboard -->
-          <div class="media-card-v2">
+          <!-- Card 4: Visual Regulatory Dashboard -->
+          <div class="showcase-card">
             <div class="card-badge">Data Visuals</div>
             <div class="video-container-v2">
               <video controls poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=800&amp;q=80">
@@ -564,10 +569,127 @@ parties = doc.extract_parties()
               </video>
             </div>
             <div class="media-caption">
-              <h4><i class="fa-solid fa-chart-line"></i> Regulatory Dashboard</h4>
-              <p>Real-time tracking of statutory updates and regulatory metrics visualizer.</p>
+              <h4><i class="fa-solid fa-chart-line"></i> Statutory Data &amp; Regulatory Dashboard</h4>
+              <p>Real-time visualization tracking regulatory updates, statutory metrics, and legal compliance parameters.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH & WORKING PAPERS -->
+    <section id="publications" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">LEGAL ANALYSIS &amp; WORKING PAPERS</span>
+          <h2 class="section-title">Research Briefs &amp; Statutory Notes</h2>
+        </div>
+
+        <!-- 2x2 Responsive Grid Layout -->
+        <div class="showcase-grid-2x2">
+          <!-- Card 1: Algorithmic Accountability Working Paper -->
+          <article class="pub-card-v2">
+            <div class="pub-card-header">
+              <span class="pub-type-badge working-paper"> <i class="fa-solid fa-file-signature"></i> Working Paper </span>
+              <span class="pub-status-tag">Forthcoming Journal Article</span>
+            </div>
+            <div class="pub-card-body">
+              <h3 class="pub-card-title">Algorithmic Accountability &amp; Constitutional Safeguards</h3>
+              <p class="pub-card-abstract">
+                A critical examination of automated administrative decisions, assessing constitutional due process, liability allocation, and judicial
+                review mechanisms in algorithmic systems.
+              </p>
+            </div>
+            <div class="pub-card-tags">
+              <span class="tag">Constitutional Law</span>
+              <span class="tag">AI Governance</span>
+              <span class="tag">Administrative Law</span>
+            </div>
+            <div class="pub-card-footer">
+              <a href="#contact" class="pub-action-btn">
+                <span>Request Abstract &amp; Outline</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Property & Statutory Law Analysis -->
+          <article class="pub-card-v2">
+            <div class="pub-card-header">
+              <span class="pub-type-badge statutory-note"> <i class="fa-solid fa-gavel"></i> Statutory Analysis </span>
+              <span class="pub-status-tag">Legal Brief</span>
+            </div>
+            <div class="pub-card-body">
+              <h3 class="pub-card-title">Document Annulment &amp; Ancestral Property Rights</h3>
+              <p class="pub-card-abstract">
+                Practical statutory evaluation of civil procedures governing <em>Likhit Badar</em> (cancellation of documents) and partition claims
+                among coparceners under current Civil Code provisions.
+              </p>
+            </div>
+            <div class="pub-card-tags">
+              <span class="tag">Property Law</span>
+              <span class="tag">Civil Code</span>
+              <span class="tag">Litigation Practice</span>
+            </div>
+            <div class="pub-card-footer">
+              <a href="#contact" class="pub-action-btn">
+                <span>Read Summary Note</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Judicial Exam & Electoral Analytics -->
+          <article class="pub-card-v2">
+            <div class="pub-card-header">
+              <span class="pub-type-badge case-study"> <i class="fa-solid fa-chart-pie"></i> Analytical Brief </span>
+              <span class="pub-status-tag">Electoral Metrics</span>
+            </div>
+            <div class="pub-card-body">
+              <h3 class="pub-card-title">Proportional Representation &amp; Electoral Calculation Formulas</h3>
+              <p class="pub-card-abstract">
+                A data-driven breakdown evaluating mathematical threshold formulas, seat allocation metrics, and electoral system calculations in
+                parliamentary governance.
+              </p>
+            </div>
+            <div class="pub-card-tags">
+              <span class="tag">Public Law</span>
+              <span class="tag">Electoral Systems</span>
+              <span class="tag">Data Analytics</span>
+            </div>
+            <div class="pub-card-footer">
+              <a href="#contact" class="pub-action-btn">
+                <span>Explore Analytical Model</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4: Legal Tech & Contract Automation Guide -->
+          <article class="pub-card-v2">
+            <div class="pub-card-header">
+              <span class="pub-type-badge tech-guide"> <i class="fa-solid fa-code"></i> Tech Whitepaper </span>
+              <span class="pub-status-tag">Software Architecture</span>
+            </div>
+            <div class="pub-card-body">
+              <h3 class="pub-card-title">Structured Contract Parsing via Python Legal Engines</h3>
+              <p class="pub-card-abstract">
+                Technical blueprint detailing rule-based Regex and NLP parsing engines engineered to convert unstructured contract clauses into
+                standardized, searchable JSON outputs.
+              </p>
+            </div>
+            <div class="pub-card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Contract Automation</span>
+              <span class="tag">Legal Tech</span>
+            </div>
+            <div class="pub-card-footer">
+              <a href="#contact" class="pub-action-btn">
+                <span>View Technical Architecture</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </section>

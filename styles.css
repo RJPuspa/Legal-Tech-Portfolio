@@ -774,22 +774,22 @@ textarea {
   font-weight: 600;
 }
 
-/* --------------------------------------------------------------------------
-   4-Column Grid & Workflows Styling
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   2x2 Responsive Grid Layout for Showcase & Research Sections
+   ========================================================================== */
 
-/* Responsive Grid - 4 Columns on Large Screens */
-.media-grid-4 {
+/* Unified 2x2 Grid Container */
+.showcase-grid-2x2 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns = 2 cards per row */
+  gap: 1.75rem;
   width: 100%;
   margin-top: 2rem;
   align-items: stretch;
 }
 
-/* Card Container */
-.media-card-v2 {
+/* --- Section 1: Showcase Cards Styling --- */
+.showcase-card {
   background: var(--bg-card, #121824);
   border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
   border-radius: 12px;
@@ -803,54 +803,54 @@ textarea {
     box-shadow 0.25s ease;
 }
 
-.media-card-v2:hover {
+.showcase-card:hover {
   transform: translateY(-4px);
   border-color: #3b82f6;
-  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 12px 30px -5px rgba(59, 130, 246, 0.18);
 }
 
 .card-badge {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
   background: rgba(15, 23, 42, 0.85);
   backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: #38bdf8;
-  font-size: 0.7rem;
+  font-size: 0.725rem;
   font-weight: 600;
-  padding: 0.2rem 0.55rem;
+  padding: 0.25rem 0.65rem;
   border-radius: 20px;
   z-index: 2;
 }
 
-/* Equal Height Inner Visual Displays */
+/* Inner Displays Height & Alignment */
 .terminal-preview-container,
 .workflow-flow-container,
 .research-spotlight-container,
 .video-container-v2 {
-  height: 200px;
+  height: 220px;
   background: #0f172a;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-/* 1. Terminal Styling */
+/* Terminal Styling */
 .terminal-header {
   background: #1e293b;
-  padding: 0.4rem 0.75rem;
+  padding: 0.5rem 0.85rem;
   display: flex;
   align-items: center;
 }
 
 .terminal-dots {
   display: flex;
-  gap: 5px;
+  gap: 6px;
 }
 .terminal-dots .dot {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
 }
 .terminal-dots .red {
@@ -865,15 +865,15 @@ textarea {
 
 .terminal-title {
   color: #94a3b8;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   margin: 0 auto;
-  font-family: monospace;
+  font-family: "Fira Code", monospace;
 }
 
 .terminal-body {
-  padding: 0.85rem;
-  font-size: 0.75rem;
-  line-height: 1.5;
+  padding: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
   color: #e2e8f0;
   font-family: "Fira Code", Consolas, monospace;
   overflow-y: auto;
@@ -894,15 +894,15 @@ textarea {
   color: #10b981;
   font-weight: 600;
   display: block;
-  margin-top: 0.35rem;
+  margin-top: 0.5rem;
 }
 
-/* 2. Flowchart Diagram Styling */
+/* Flowchart Visual */
 .workflow-flow-container {
-  padding: 1rem;
+  padding: 1.25rem;
   justify-content: center;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
   background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
 }
 
@@ -910,116 +910,232 @@ textarea {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 6px;
-  padding: 0.35rem 0.75rem;
+  padding: 0.45rem 0.85rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.75rem;
+  gap: 0.6rem;
+  font-size: 0.8rem;
   color: #cbd5e1;
-  width: 85%;
+  width: 80%;
 }
 
 .flow-node.highlight {
   border-color: #3b82f6;
   color: #60a5fa;
-  background: rgba(59, 130, 246, 0.1);
+  background: rgba(59, 130, 246, 0.12);
 }
 .flow-node.success {
   border-color: #10b981;
   color: #34d399;
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(16, 185, 129, 0.12);
 }
 
 .flow-connector {
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   color: #64748b;
   margin: -2px 0;
 }
 
-/* 3. Research Spotlight Styling */
+/* Research Spotlight Visual */
 .research-spotlight-container {
-  padding: 1rem;
+  padding: 1.25rem;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
 }
 
 .brief-tag {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: #a855f7;
   font-weight: 600;
 }
-
 .brief-title {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #f8fafc;
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.35;
 }
-
 .brief-meta {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: #94a3b8;
   margin: 0;
 }
-
 .brief-snippet {
-  font-size: 0.72rem;
+  font-size: 0.775rem;
   color: #cbd5e1;
   font-style: italic;
   border-left: 2px solid #a855f7;
-  padding-left: 0.5rem;
+  padding-left: 0.6rem;
   margin-top: 0.25rem;
 }
 
-/* 4. Video Box Styling */
+/* Video Box */
 .video-container-v2 video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Captions Alignment */
+/* Showcase Captions */
 .media-caption {
-  padding: 1.1rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.4rem;
   flex-grow: 1;
 }
 
 .media-caption h4 {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #f8fafc;
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
 }
 
 .media-caption h4 i {
   color: #3b82f6;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
-
 .media-caption p {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #94a3b8;
-  line-height: 1.5;
+  line-height: 1.55;
   margin: 0;
 }
 
-/* Responsive Adjustments for Mobile & Tablets */
-@media (max-width: 1200px) {
-  .media-grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* --- Section 2: Research Cards Styling --- */
+.pub-card-v2 {
+  background: var(--bg-card, #121824);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-@media (max-width: 640px) {
-  .media-grid-4 {
-    grid-template-columns: 1fr;
+.pub-card-v2:hover {
+  transform: translateY(-4px);
+  border-color: #3b82f6;
+  box-shadow: 0 12px 30px -5px rgba(59, 130, 246, 0.18);
+}
+
+.pub-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.pub-type-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pub-type-badge.working-paper {
+  background: rgba(168, 85, 247, 0.12);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+}
+
+.pub-type-badge.statutory-note {
+  background: rgba(59, 130, 246, 0.12);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.pub-type-badge.case-study {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.pub-type-badge.tech-guide {
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.pub-status-tag {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-family: monospace;
+}
+.pub-card-body {
+  flex-grow: 1;
+}
+.pub-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+.pub-card-abstract {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 1.1rem;
+}
+
+.pub-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.25rem;
+}
+
+.pub-card-tags .tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 0.725rem;
+  padding: 0.22rem 0.55rem;
+  border-radius: 4px;
+}
+
+.pub-card-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1rem;
+}
+
+.pub-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #38bdf8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pub-action-btn:hover {
+  color: #60a5fa;
+}
+.pub-action-btn i {
+  transition: transform 0.2s ease;
+}
+.pub-action-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* --- Responsive Layout Rules --- */
+@media (max-width: 900px) {
+  .showcase-grid-2x2 {
+    grid-template-columns: 1fr; /* Switch to single column on mobile/tablet */
   }
 }
 
