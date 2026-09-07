@@ -238,7 +238,7 @@ output = formatter.to_json(results)
     </section>
 
     <!-- =========================
-         EXPERTISE SECTION
+     EXPERTISE SECTION
     ========================== -->
     <section id="expertise" class="section bg-surface">
       <div class="container">
@@ -246,88 +246,111 @@ output = formatter.to_json(results)
           <span class="section-tag">CORE CAPABILITIES &amp; STACK</span>
 
           <h2 class="section-title">Areas of Technical &amp; Legal Focus</h2>
+
+          <p class="section-description">
+            A practical combination of legal analysis, software development, document automation, and technology governance.
+          </p>
         </div>
 
         <!-- Expertise Tabs -->
-        <div class="expertise-tabs">
-          <button class="exp-tab-btn active" data-tab="tab-automation" type="button">
-            <i class="fa-solid fa-gears"></i>
+        <div class="expertise-tabs" role="tablist" aria-label="Areas of expertise">
+          <button class="exp-tab-btn active" data-tab="tab-automation" type="button" role="tab" aria-selected="true">
+            <i class="fa-solid fa-gears" aria-hidden="true"></i>
             Legal Automation
           </button>
 
-          <button class="exp-tab-btn" data-tab="tab-governance" type="button">
-            <i class="fa-solid fa-shield-halved"></i>
+          <button class="exp-tab-btn" data-tab="tab-governance" type="button" role="tab" aria-selected="false">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
             AI Governance
           </button>
 
-          <button class="exp-tab-btn" data-tab="tab-dev" type="button">
-            <i class="fa-solid fa-code"></i>
+          <button class="exp-tab-btn" data-tab="tab-dev" type="button" role="tab" aria-selected="false">
+            <i class="fa-solid fa-code" aria-hidden="true"></i>
             Web Engineering
           </button>
         </div>
 
         <!-- =========================
-             TAB 1 — LEGAL AUTOMATION
-        ========================== -->
-        <div class="exp-tab-content active" id="tab-automation">
+         TAB 1 — LEGAL AUTOMATION
+    ========================== -->
+        <div class="exp-tab-content active" id="tab-automation" role="tabpanel">
           <div class="expertise-display-grid">
             <div class="expertise-info">
+              <span class="expertise-kicker">DOCUMENT INTELLIGENCE</span>
+
               <h3>Legal Document Automation</h3>
 
               <p>
-                Turning repetitive legal-document workflows into structured and reusable processes through document parsing, template logic, data
-                extraction, and automation.
+                Designing practical workflows that transform unstructured legal documents into reusable, structured information and automated document
+                processes.
               </p>
 
               <ul class="exp-list">
                 <li>
-                  <i class="fa-solid fa-check-circle"></i>
-                  Generating structured legal documents using Python and Jinja2 templates.
+                  <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+                  Parsing and extracting information from PDF, Word, and text-based legal documents.
                 </li>
 
                 <li>
-                  <i class="fa-solid fa-check-circle"></i>
-                  Extracting text and structured information from PDF and Word documents.
+                  <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+                  Building document templates and generation workflows using Python and Jinja2.
                 </li>
 
                 <li>
-                  <i class="fa-solid fa-check-circle"></i>
-                  Designing rule-based clause identification and validation workflows.
+                  <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+                  Developing rule-based approaches for clause identification, validation, and structured data extraction.
                 </li>
               </ul>
             </div>
 
-            <div class="skill-bars">
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>Python &amp; Document Processing</span>
-                  <span>92%</span>
-                </div>
-
-                <div class="progress-bar">
-                  <div class="progress" style="width: 92%"></div>
-                </div>
+            <div class="skill-panel">
+              <div class="skill-panel-header">
+                <span class="skill-panel-label">TECHNICAL STACK</span>
+                <span class="skill-panel-status">
+                  <i class="fa-solid fa-circle"></i>
+                  Applied
+                </span>
               </div>
 
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>Template &amp; Document Logic</span>
-                  <span>90%</span>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>Python</span>
+                    <span>Document Processing</span>
+                  </div>
+
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 92%"></div>
+                  </div>
                 </div>
 
-                <div class="progress-bar">
-                  <div class="progress" style="width: 90%"></div>
-                </div>
-              </div>
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>Jinja2</span>
+                    <span>Template Logic</span>
+                  </div>
 
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>Regex &amp; Structured Extraction</span>
-                  <span>85%</span>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 88%"></div>
+                  </div>
                 </div>
 
-                <div class="progress-bar">
-                  <div class="progress" style="width: 85%"></div>
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>Regex</span>
+                    <span>Structured Extraction</span>
+                  </div>
+
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-tags">
+                  <span>PDF Parsing</span>
+                  <span>DOCX Processing</span>
+                  <span>JSON</span>
+                  <span>Data Extraction</span>
                 </div>
               </div>
             </div>
@@ -335,66 +358,86 @@ output = formatter.to_json(results)
         </div>
 
         <!-- =========================
-             TAB 2 — AI GOVERNANCE
-        ========================== -->
-        <div class="exp-tab-content" id="tab-governance">
+         TAB 2 — AI GOVERNANCE
+    ========================== -->
+        <div class="exp-tab-content" id="tab-governance" role="tabpanel">
           <div class="expertise-display-grid">
             <div class="expertise-info">
+              <span class="expertise-kicker">RESPONSIBLE TECHNOLOGY</span>
+
               <h3>AI Governance &amp; Technology Compliance</h3>
 
               <p>
-                Examining automated decision-making and AI-enabled systems from legal, ethical, privacy, accountability, and governance perspectives.
+                Examining AI-enabled and automated decision-making systems from legal, ethical, privacy, accountability, and governance perspectives.
               </p>
 
               <ul class="exp-list">
                 <li>
-                  <i class="fa-solid fa-check-circle"></i>
-                  Assessing automated systems for transparency, accountability, and potential rights impacts.
+                  <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+                  Assessing automated systems for transparency, accountability, explainability, and potential rights impacts.
                 </li>
 
                 <li>
-                  <i class="fa-solid fa-check-circle"></i>
+                  <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
                   Mapping data-processing activities against applicable privacy and regulatory requirements.
                 </li>
 
                 <li>
-                  <i class="fa-solid fa-check-circle"></i>
+                  <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
                   Developing practical governance checklists, risk frameworks, and compliance-oriented workflows.
                 </li>
               </ul>
             </div>
 
-            <div class="skill-bars">
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>AI Governance &amp; Algorithmic Review</span>
-                  <span>90%</span>
-                </div>
+            <div class="skill-panel">
+              <div class="skill-panel-header">
+                <span class="skill-panel-label">CORE FOCUS</span>
 
-                <div class="progress-bar">
-                  <div class="progress" style="width: 90%"></div>
-                </div>
+                <span class="skill-panel-status">
+                  <i class="fa-solid fa-circle"></i>
+                  Applied
+                </span>
               </div>
 
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>Privacy &amp; Regulatory Mapping</span>
-                  <span>90%</span>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>AI Governance</span>
+                    <span>Algorithmic Review</span>
+                  </div>
+
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 90%"></div>
+                  </div>
                 </div>
 
-                <div class="progress-bar">
-                  <div class="progress" style="width: 90%"></div>
-                </div>
-              </div>
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>Privacy</span>
+                    <span>Regulatory Mapping</span>
+                  </div>
 
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>Legal Risk &amp; Technology Assessment</span>
-                  <span>88%</span>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 90%"></div>
+                  </div>
                 </div>
 
-                <div class="progress-bar">
-                  <div class="progress" style="width: 88%"></div>
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>Technology Risk</span>
+                    <span>Legal Assessment</span>
+                  </div>
+
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 88%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-tags">
+                  <span>AI Ethics</span>
+                  <span>Accountability</span>
+                  <span>Privacy</span>
+                  <span>Risk Frameworks</span>
                 </div>
               </div>
             </div>
@@ -402,67 +445,87 @@ output = formatter.to_json(results)
         </div>
 
         <!-- =========================
-             TAB 3 — WEB ENGINEERING
-        ========================== -->
-        <div class="exp-tab-content" id="tab-dev">
+         TAB 3 — WEB ENGINEERING
+    ========================== -->
+        <div class="exp-tab-content" id="tab-dev" role="tabpanel">
           <div class="expertise-display-grid">
             <div class="expertise-info">
+              <span class="expertise-kicker">SOFTWARE &amp; WEB SYSTEMS</span>
+
               <h3>Web &amp; Software Engineering</h3>
 
               <p>
-                Developing responsive web interfaces and software prototypes that make legal information, workflows, and structured data easier to
-                access and work with.
+                Building responsive web interfaces and software prototypes that make legal information, workflows, and structured data easier to
+                access, search, and work with.
               </p>
 
               <ul class="exp-list">
                 <li>
-                  <i class="fa-solid fa-check-circle"></i>
+                  <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
                   Building responsive interfaces using HTML5, CSS3, and modern JavaScript.
                 </li>
 
                 <li>
-                  <i class="fa-solid fa-check-circle"></i>
+                  <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
                   Working with APIs, JSON data, search interfaces, and browser-based legal tools.
                 </li>
 
                 <li>
-                  <i class="fa-solid fa-check-circle"></i>
+                  <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
                   Using Git and structured development workflows for version control and project management.
                 </li>
               </ul>
             </div>
 
-            <div class="skill-bars">
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>HTML5, CSS3 &amp; JavaScript</span>
-                  <span>90%</span>
-                </div>
+            <div class="skill-panel">
+              <div class="skill-panel-header">
+                <span class="skill-panel-label">TECHNICAL STACK</span>
 
-                <div class="progress-bar">
-                  <div class="progress" style="width: 90%"></div>
-                </div>
+                <span class="skill-panel-status">
+                  <i class="fa-solid fa-circle"></i>
+                  Applied
+                </span>
               </div>
 
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>APIs, JSON &amp; Search Interfaces</span>
-                  <span>85%</span>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>HTML5 &amp; CSS3</span>
+                    <span>Responsive UI</span>
+                  </div>
+
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 92%"></div>
+                  </div>
                 </div>
 
-                <div class="progress-bar">
-                  <div class="progress" style="width: 85%"></div>
-                </div>
-              </div>
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>JavaScript</span>
+                    <span>Interactive Systems</span>
+                  </div>
 
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>Git &amp; Development Workflow</span>
-                  <span>88%</span>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 88%"></div>
+                  </div>
                 </div>
 
-                <div class="progress-bar">
-                  <div class="progress" style="width: 88%"></div>
+                <div class="skill-item">
+                  <div class="skill-header">
+                    <span>Git &amp; GitHub</span>
+                    <span>Version Control</span>
+                  </div>
+
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 85%"></div>
+                  </div>
+                </div>
+
+                <div class="skill-tags">
+                  <span>REST APIs</span>
+                  <span>JSON</span>
+                  <span>Search UI</span>
+                  <span>Responsive Design</span>
                 </div>
               </div>
             </div>
@@ -470,77 +533,139 @@ output = formatter.to_json(results)
         </div>
 
         <!-- =========================
-             WORKFLOW PIPELINE
-        ========================== -->
+         ARCHITECTURAL WORKFLOW
+    ========================== -->
         <div class="pipeline-card">
           <div class="pipeline-header">
             <span class="section-tag">ARCHITECTURAL WORKFLOW</span>
 
             <h3>
-              <i class="fa-solid fa-diagram-project"></i>
+              <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
               From Legal Document to Structured Data
             </h3>
+
+            <p>A simplified representation of how legal documents can be transformed into structured, machine-readable information.</p>
           </div>
 
           <div class="pipeline-flow">
+            <!-- STEP 1 -->
             <div class="flow-step">
+              <div class="step-number">01</div>
+
               <div class="step-icon">
-                <i class="fa-solid fa-file-pdf"></i>
+                <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
               </div>
 
-              <h4>1. Document Ingestion</h4>
+              <span class="flow-label">INPUT</span>
+
+              <h4>Document Ingestion</h4>
 
               <p>Read and prepare PDF, Word, or text-based legal documents for processing.</p>
+
+              <div class="flow-tech">
+                <span>PDF</span>
+                <span>DOCX</span>
+                <span>TXT</span>
+              </div>
             </div>
 
-            <div class="flow-arrow">
-              <i class="fa-solid fa-chevron-right"></i>
+            <!-- ARROW -->
+            <div class="flow-arrow" aria-hidden="true">
+              <i class="fa-solid fa-arrow-right"></i>
             </div>
 
+            <!-- STEP 2 -->
             <div class="flow-step">
+              <div class="step-number">02</div>
+
               <div class="step-icon">
-                <i class="fa-solid fa-filter"></i>
+                <i class="fa-solid fa-filter" aria-hidden="true"></i>
               </div>
 
-              <h4>2. Information Extraction</h4>
+              <span class="flow-label">PROCESSING</span>
+
+              <h4>Information Extraction</h4>
 
               <p>Identify clauses, parties, dates, monetary values, references, and other relevant fields.</p>
+
+              <div class="flow-tech">
+                <span>Regex</span>
+                <span>Rules</span>
+                <span>Parsing</span>
+              </div>
             </div>
 
-            <div class="flow-arrow">
-              <i class="fa-solid fa-chevron-right"></i>
+            <!-- ARROW -->
+            <div class="flow-arrow" aria-hidden="true">
+              <i class="fa-solid fa-arrow-right"></i>
             </div>
 
+            <!-- STEP 3 -->
             <div class="flow-step">
+              <div class="step-number">03</div>
+
               <div class="step-icon">
-                <i class="fa-solid fa-code"></i>
+                <i class="fa-solid fa-database" aria-hidden="true"></i>
               </div>
 
-              <h4>3. Structured Output</h4>
+              <span class="flow-label">OUTPUT</span>
+
+              <h4>Structured Data</h4>
 
               <p>Convert extracted information into normalized JSON or reusable application data.</p>
+
+              <div class="flow-tech">
+                <span>JSON</span>
+                <span>Schema</span>
+                <span>API</span>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- =========================
-             INTERACTIVE PLAYGROUND
-        ========================== -->
+     INTERACTIVE PLAYGROUND
+========================== -->
         <div class="playground-card">
+          <!-- Playground Header -->
           <div class="playground-header">
-            <h3>
-              <i class="fa-solid fa-terminal"></i>
-              Interactive Legal Document Playground
-            </h3>
+            <div class="playground-title-row">
+              <div class="playground-title-icon">
+                <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+              </div>
 
-            <p>Enter sample legal text and explore how a simple rule-based parser can identify structured information.</p>
+              <div>
+                <span class="playground-kicker">INTERACTIVE DEMO</span>
+
+                <h3>Legal Document Parser</h3>
+              </div>
+            </div>
+
+            <p>Enter sample legal text and explore how a simple rule-based parser can identify and structure key information.</p>
           </div>
 
+          <!-- Playground Two-Column Area -->
           <div class="playground-grid">
-            <div class="playground-input">
-              <label for="sample-contract"> Sample Legal Text Input: </label>
+            <!-- =========================
+         INPUT PANEL
+    ========================== -->
+            <div class="playground-panel playground-input">
+              <div class="playground-panel-header">
+                <div>
+                  <span class="panel-label">01 / INPUT</span>
 
-              <textarea id="sample-contract" rows="6" aria-label="Sample legal document text">
+                  <h4>Sample Legal Text</h4>
+                </div>
+
+                <span class="panel-status">
+                  <i class="fa-solid fa-circle" aria-hidden="true"></i>
+                  Ready
+                </span>
+              </div>
+
+              <label for="sample-contract"> Contract / Document Text </label>
+
+              <textarea id="sample-contract" name="sample-contract" rows="10" aria-label="Sample legal document text" spellcheck="false">
 Party A: Apex Legal Tech Ltd.
 Party B: Global Tech Solutions Inc.
 Total Fee: $35,000 USD
@@ -548,17 +673,43 @@ Date: 01 September 2026
 Jurisdiction: Kathmandu, Nepal</textarea
               >
 
-              <button id="run-parser-btn" class="btn btn-primary btn-full" style="margin-top: 12px" type="button">
-                <i class="fa-solid fa-bolt"></i>
+              <button id="run-parser-btn" class="btn btn-primary btn-full" type="button">
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
                 Run Parser Engine
               </button>
             </div>
 
-            <div class="playground-output">
-              <label for="json-output"> Extracted Structured JSON Output: </label>
+            <!-- =========================
+         OUTPUT PANEL
+    ========================== -->
+            <div class="playground-panel playground-output">
+              <div class="playground-panel-header">
+                <div>
+                  <span class="panel-label">02 / OUTPUT</span>
+
+                  <h4>Structured JSON</h4>
+                </div>
+
+                <span class="panel-status">
+                  <i class="fa-solid fa-circle" aria-hidden="true"></i>
+                  JSON
+                </span>
+              </div>
+
+              <label for="json-output"> Extracted Structured Data </label>
 
               <pre id="json-output"><code>Click "Run Parser Engine" to extract structured data...</code></pre>
             </div>
+          </div>
+
+          <!-- Playground Footer -->
+          <div class="playground-footer">
+            <span>
+              <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+              Prototype demonstration — browser-based rule extraction.
+            </span>
+
+            <span> HTML5 · CSS3 · JavaScript · JSON </span>
           </div>
         </div>
       </div>
