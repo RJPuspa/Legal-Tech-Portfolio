@@ -3,11 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Legal Tech Specialist &amp; Advocate | Portfolio</title>
+
     <meta
       name="description"
-      content="Portfolio of a Bar Council Advocate &amp; Legal Tech Specialist engineering Python automation, web systems, and algorithmic governance frameworks."
+      content="Portfolio of an Advocate and Legal Tech Specialist exploring legal automation, document intelligence, web development, AI governance, privacy, and technology-driven legal workflows."
     />
+    <meta name="author" content="Legal Tech Specialist &amp; Advocate" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0a0f1c" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Legal Tech Specialist &amp; Advocate | Portfolio" />
+    <meta
+      property="og:description"
+      content="Exploring the intersection of law, software engineering, legal automation, document intelligence, and AI governance."
+    />
+    <meta property="og:type" content="website" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,109 +36,141 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <!-- Ambient Overlay Grid -->
+    <!-- Ambient Background -->
     <div class="bg-grid-overlay"></div>
     <div class="glow-sphere sphere-1"></div>
     <div class="glow-sphere sphere-2"></div>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <nav class="navbar" aria-label="Main navigation">
       <div class="container nav-container">
-        <!-- Left Grouping: Logo + Links -->
+        <!-- Logo + Navigation -->
         <div class="nav-left-group">
-          <a href="#" class="logo">&lt;LegalTech /&gt;</a>
+          <a href="#" class="logo" aria-label="Legal Tech Portfolio home"> &lt;LegalTech /&gt; </a>
 
           <ul class="nav-menu" id="nav-menu">
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#expertise" class="nav-link">Expertise</a></li>
-            <li><a href="#projects" class="nav-link">Builds &amp; Code</a></li>
-            <li><a href="#media" class="nav-link">Demos &amp; Media</a></li>
-            <li><a href="#publications" class="nav-link">Research</a></li>
+            <li>
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li>
+              <a href="#expertise" class="nav-link">Expertise</a>
+            </li>
+            <li>
+              <a href="#projects" class="nav-link">Builds &amp; Code</a>
+            </li>
+            <li>
+              <a href="#media" class="nav-link">Demos &amp; Media</a>
+            </li>
+            <li>
+              <a href="#publications" class="nav-link">Research</a>
+            </li>
           </ul>
         </div>
 
-        <!-- Right Grouping: Action Buttons & Theme Switcher -->
+        <!-- Navigation Actions -->
         <div class="nav-actions">
           <a href="#contact" class="btn btn-glow">Contact</a>
-          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle colour theme" type="button">
             <i class="fa-solid fa-sun" id="theme-icon"></i>
           </button>
-          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu">
+
+          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-controls="nav-menu" aria-expanded="false" type="button">
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
       </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
     <section class="hero">
       <div class="container">
         <div class="hero-grid">
-          <!-- LEFT COLUMN: Main Copy & CTA Buttons -->
+          <!-- Hero Content -->
           <div class="hero-left">
             <div class="status-badge-container">
-              <span class="status-badge"> <span class="pulsing-dot"></span> Bar Council Advocate &amp; Legal Tech Specialist </span>
-              <span class="status-badge"> <span class="pulsing-dot"></span> Available for Consulting &amp; Research </span>
+              <span class="status-badge">
+                <span class="dot"></span>
+                Advocate &amp; Legal Tech Specialist
+              </span>
+
+              <span class="status-badge">
+                <span class="dot"></span>
+                Open to Consulting, Research &amp; Collaboration
+              </span>
             </div>
 
-            <h1 class="hero-title">Engineering Software &amp;<br />Modern Legal Systems</h1>
+            <h1 class="hero-title">
+              Where Legal Expertise<br />
+              Meets Software Engineering
+            </h1>
 
             <p class="hero-subtitle">
-              Fusing legal domain authority with modern software engineering. Specializing in Python legal automation, custom web interfaces, contract
-              parsing engines, and algorithmic governance.
+              I explore and build practical technology for legal work — combining legal analysis with Python automation, document intelligence, web
+              development, structured data, and AI governance.
             </p>
 
             <div class="hero-buttons">
-              <a href="#projects" class="btn btn-primary"> <i class="fa-solid fa-code"></i> Explore Technical Builds </a>
-              <a href="#contact" class="btn btn-outline"> <i class="fa-solid fa-paper-plane"></i> Get In Touch </a>
+              <a href="#projects" class="btn btn-primary">
+                <i class="fa-solid fa-code"></i>
+                Explore Technical Builds
+              </a>
+
+              <a href="#contact" class="btn btn-outline">
+                <i class="fa-solid fa-paper-plane"></i>
+                Get In Touch
+              </a>
             </div>
           </div>
 
-          <!-- RIGHT COLUMN: Console Card -->
+          <!-- Hero Console -->
           <div class="hero-right">
-            <div class="hero-console-card">
-              <!-- Console Header -->
+            <div class="hero-metrics-card">
               <div class="console-header">
                 <span class="dot red"></span>
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
-                <span class="console-title">legal_tech_engine.py</span>
+                <span class="console-title">legal_tech_workflow.py</span>
               </div>
 
-              <!-- Console Body -->
               <div class="console-body">
-                <pre><code><span class="kwd">import</span> legal_tech <span class="kwd">as</span> lt
+                <pre><code><span class="kwd">document</span> = parser.load(<span class="string">"contract.pdf"</span>)
 
-<span class="comment"># Legal Technology Workflow System</span>
-engine = lt.Engine(domain=<span class="string">"Legal Operations"</span>)
+<span class="comment"># Extract relevant legal information</span>
+clauses = parser.extract_clauses(document)
+parties = parser.extract_parties(document)
 
-<span class="comment"># Core Capabilities</span>
-engine.enable(<span class="string">"Document Intelligence"</span>)
-engine.enable(<span class="string">"Legal Data Extraction"</span>)
-engine.enable(<span class="string">"Workflow Automation"</span>)
+<span class="comment"># Apply rule-based validation</span>
+results = validator.evaluate(clauses)
 
-<span class="comment"># System Status</span>
-status = engine.check_readiness()
-print(<span class="string">"Building Smarter Legal Workflows"</span>)
+<span class="comment"># Prepare structured output</span>
+output = formatter.to_json(results)
 
-<span class="output">&gt;&gt;&gt; System Status: Ready</span></code></pre>
+<span class="output">&gt;&gt;&gt; Pipeline Status: Ready for Evaluation</span></code></pre>
 
                 <!-- Console Metrics -->
                 <div class="console-metrics-row">
                   <div class="metric-mini">
-                    <span class="m-val" data-target="3">3</span><span class="m-unit">+</span>
-                    <span class="m-lbl">Core Capabilities</span>
+                    <span class="m-val" data-target="3">3</span>
+                    <span class="m-unit">+</span>
+                    <span class="m-lbl">Core Workstreams</span>
                   </div>
 
                   <div class="metric-mini">
                     <span class="m-val" data-target="1">1</span>
-                    <span class="m-lbl">Legal Tech Focus</span>
+                    <span class="m-lbl">Legal + Tech Focus</span>
                   </div>
 
                   <div class="metric-mini">
-                    <span class="m-val" data-target="3">3</span><span class="m-unit">+</span>
-                    <span class="m-lbl">Workflow Solutions</span>
+                    <span class="m-val" data-target="3">3</span>
+                    <span class="m-unit">+</span>
+                    <span class="m-lbl">Portfolio Builds</span>
                   </div>
                 </div>
               </div>
@@ -135,185 +180,219 @@ print(<span class="string">"Building Smarter Legal Workflows"</span>)
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- =========================
+         ABOUT SECTION
+    ========================== -->
     <section id="about" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">BACKGROUND &amp; SYNERGY</span>
-          <h2 class="section-title">Legal Precision Meets Tech Execution</h2>
+          <span class="section-tag">BACKGROUND &amp; APPROACH</span>
+
+          <h2 class="section-title">Legal Reasoning. Technical Execution. Practical Systems.</h2>
         </div>
 
         <div class="about-grid">
+          <!-- Legal -->
           <div class="about-card">
-            <div class="card-icon"><i class="fa-solid fa-gavel"></i></div>
-            <h3>Legal Authority</h3>
-            <p>Registered Advocate with extensive expertise in statutory analysis, jurisprudence, constitutional rights, and legal compliance.</p>
+            <div class="card-icon">
+              <i class="fa-solid fa-gavel"></i>
+            </div>
+
+            <h3>Legal Practice &amp; Analysis</h3>
+
+            <p>
+              A legal foundation grounded in statutory interpretation, legal research, jurisprudence, rights-based analysis, and practical legal
+              problem-solving.
+            </p>
           </div>
+
+          <!-- Technology -->
           <div class="about-card">
             <div class="card-icon">
               <i class="fa-solid fa-laptop-code"></i>
             </div>
-            <h3>Legal Tech Engineering</h3>
+
+            <h3>Legal Technology Development</h3>
+
             <p>
-              Hands-on software operations experience, writing Python &amp; JavaScript code to build legal document engines and automated workflows.
+              Building and experimenting with Python, JavaScript, document parsing, structured data, web interfaces, and automation workflows designed
+              around real legal use cases.
             </p>
           </div>
+
+          <!-- Governance -->
           <div class="about-card">
-            <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
-            <h3>Algorithmic Governance</h3>
-            <p>Analyzing automated decision systems, AI ethics, data privacy compliance, and statutory alignment for tech enterprise software.</p>
+            <div class="card-icon">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+
+            <h3>AI Governance &amp; Responsible Technology</h3>
+
+            <p>
+              Exploring how automated systems can be assessed through transparency, accountability, privacy, human oversight, fairness, and applicable
+              legal and regulatory principles.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERTISE SECTION -->
+    <!-- =========================
+         EXPERTISE SECTION
+    ========================== -->
     <section id="expertise" class="section bg-surface">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">CORE CAPABILITIES &amp; STACK</span>
-          <h2 class="section-title">Interactive Expertise Matrix</h2>
+
+          <h2 class="section-title">Areas of Technical &amp; Legal Focus</h2>
         </div>
 
-        <!-- Expertise Navigation Tabs -->
+        <!-- Expertise Tabs -->
         <div class="expertise-tabs">
-          <button class="exp-tab-btn active" data-tab="tab-automation"><i class="fa-solid fa-gears"></i> Legal Automation</button>
-          <button class="exp-tab-btn" data-tab="tab-governance"><i class="fa-solid fa-shield-halved"></i> Algorithmic Governance</button>
-          <button class="exp-tab-btn" data-tab="tab-dev"><i class="fa-solid fa-code"></i> Full-Stack Engineering</button>
+          <button class="exp-tab-btn active" data-tab="tab-automation" type="button">
+            <i class="fa-solid fa-gears"></i>
+            Legal Automation
+          </button>
+
+          <button class="exp-tab-btn" data-tab="tab-governance" type="button">
+            <i class="fa-solid fa-shield-halved"></i>
+            AI Governance
+          </button>
+
+          <button class="exp-tab-btn" data-tab="tab-dev" type="button">
+            <i class="fa-solid fa-code"></i>
+            Web Engineering
+          </button>
         </div>
 
-        <!-- Tab Content 1: Legal Automation -->
+        <!-- =========================
+             TAB 1 — LEGAL AUTOMATION
+        ========================== -->
         <div class="exp-tab-content active" id="tab-automation">
           <div class="expertise-display-grid">
             <div class="expertise-info">
-              <h3>Automated Legal Engineering</h3>
+              <h3>Legal Document Automation</h3>
+
               <p>
-                Bridging statutory requirements with programmatic workflows to remove operational bottlenecks, reduce contract turnaround times, and
-                minimize legal error rates.
+                Turning repetitive legal-document workflows into structured and reusable processes through document parsing, template logic, data
+                extraction, and automation.
               </p>
+
               <ul class="exp-list">
-                <li><i class="fa-solid fa-check-circle"></i> Dynamic contract assembly using Jinja2 templates &amp; Python backends.</li>
-                <li><i class="fa-solid fa-check-circle"></i> Statutory document parsing &amp; OCR extraction pipelines.</li>
-                <li><i class="fa-solid fa-check-circle"></i> Automated clause cross-referencing and validation logic.</li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  Generating structured legal documents using Python and Jinja2 templates.
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  Extracting text and structured information from PDF and Word documents.
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  Designing rule-based clause identification and validation workflows.
+                </li>
               </ul>
             </div>
+
             <div class="skill-bars">
               <div class="skill-item">
                 <div class="skill-header">
-                  <span>Python Legal Scripting (PyPDF, Docx, Jinja2)</span>
+                  <span>Python &amp; Document Processing</span>
                   <span>92%</span>
                 </div>
+
                 <div class="progress-bar">
                   <div class="progress" style="width: 92%"></div>
                 </div>
               </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>Contract Lifecycle &amp; Template Logic</span>
-                  <span>95%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 95%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>Regex &amp; Statutory Parsing</span>
-                  <span>88%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 88%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Tab Content 2: Governance & Compliance -->
-        <div class="exp-tab-content" id="tab-governance">
-          <div class="expertise-display-grid">
-            <div class="expertise-info">
-              <h3>AI Ethics &amp; Statutory Compliance</h3>
-              <p>
-                Ensuring complex computational systems, automated decision-making engines, and AI platforms align with statutory frameworks and data
-                privacy standards.
-              </p>
-              <ul class="exp-list">
-                <li><i class="fa-solid fa-check-circle"></i> Algorithmic bias audits and constitutional rights compliance.</li>
-                <li><i class="fa-solid fa-check-circle"></i> Data privacy regulatory mapping (GDPR, Local Statutory Acts).</li>
-                <li><i class="fa-solid fa-check-circle"></i> Legal tech policy design &amp; automated system risk assessment.</li>
-              </ul>
-            </div>
-            <div class="skill-bars">
               <div class="skill-item">
                 <div class="skill-header">
-                  <span>Algorithmic Auditing &amp; Governance</span>
+                  <span>Template &amp; Document Logic</span>
                   <span>90%</span>
                 </div>
+
                 <div class="progress-bar">
                   <div class="progress" style="width: 90%"></div>
                 </div>
               </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>Data Privacy &amp; Regulatory Mapping</span>
-                  <span>94%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 94%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>Corporate Legal Operations</span>
-                  <span>89%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 89%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Tab Content 3: Software Development -->
-        <div class="exp-tab-content" id="tab-dev">
-          <div class="expertise-display-grid">
-            <div class="expertise-info">
-              <h3>Modern Web Architecture</h3>
-              <p>
-                Crafting accessible, scalable, and responsive web platforms for legal query engines, search interfaces, and institutional databases.
-              </p>
-              <ul class="exp-list">
-                <li><i class="fa-solid fa-check-circle"></i> Modern frontend engineering with responsive CSS3 &amp; JavaScript.</li>
-                <li><i class="fa-solid fa-check-circle"></i> RESTful API integration for fast legal search queries.</li>
-                <li><i class="fa-solid fa-check-circle"></i> Version control, Git workflow, and automated CI/CD deployment.</li>
-              </ul>
-            </div>
-            <div class="skill-bars">
               <div class="skill-item">
                 <div class="skill-header">
-                  <span>Frontend Web Stack (HTML5, CSS3, ES6+ JS)</span>
-                  <span>90%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 90%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span>REST APIs &amp; JSON Search Engines</span>
+                  <span>Regex &amp; Structured Extraction</span>
                   <span>85%</span>
                 </div>
+
                 <div class="progress-bar">
                   <div class="progress" style="width: 85%"></div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =========================
+             TAB 2 — AI GOVERNANCE
+        ========================== -->
+        <div class="exp-tab-content" id="tab-governance">
+          <div class="expertise-display-grid">
+            <div class="expertise-info">
+              <h3>AI Governance &amp; Technology Compliance</h3>
+
+              <p>
+                Examining automated decision-making and AI-enabled systems from legal, ethical, privacy, accountability, and governance perspectives.
+              </p>
+
+              <ul class="exp-list">
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  Assessing automated systems for transparency, accountability, and potential rights impacts.
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  Mapping data-processing activities against applicable privacy and regulatory requirements.
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  Developing practical governance checklists, risk frameworks, and compliance-oriented workflows.
+                </li>
+              </ul>
+            </div>
+
+            <div class="skill-bars">
               <div class="skill-item">
                 <div class="skill-header">
-                  <span>Git &amp; Code Architecture</span>
+                  <span>AI Governance &amp; Algorithmic Review</span>
+                  <span>90%</span>
+                </div>
+
+                <div class="progress-bar">
+                  <div class="progress" style="width: 90%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Privacy &amp; Regulatory Mapping</span>
+                  <span>90%</span>
+                </div>
+
+                <div class="progress-bar">
+                  <div class="progress" style="width: 90%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Legal Risk &amp; Technology Assessment</span>
                   <span>88%</span>
                 </div>
+
                 <div class="progress-bar">
                   <div class="progress" style="width: 88%"></div>
                 </div>
@@ -322,153 +401,291 @@ print(<span class="string">"Building Smarter Legal Workflows"</span>)
           </div>
         </div>
 
-        <!-- Workflow Pipeline -->
-        <div class="pipeline-card">
-          <div class="pipeline-header">
-            <span class="section-tag">ARCHITECTURAL WORKFLOW</span>
-            <h3><i class="fa-solid fa-diagram-project"></i> Legal Data Processing Pipeline</h3>
-          </div>
-          <div class="pipeline-flow">
-            <div class="flow-step">
-              <div class="step-icon"><i class="fa-solid fa-file-pdf"></i></div>
-              <h4>1. Ingest PDF/Text</h4>
-              <p>Raw legal document input via <code>pdfplumber</code> stream</p>
+        <!-- =========================
+             TAB 3 — WEB ENGINEERING
+        ========================== -->
+        <div class="exp-tab-content" id="tab-dev">
+          <div class="expertise-display-grid">
+            <div class="expertise-info">
+              <h3>Web &amp; Software Engineering</h3>
+
+              <p>
+                Developing responsive web interfaces and software prototypes that make legal information, workflows, and structured data easier to
+                access and work with.
+              </p>
+
+              <ul class="exp-list">
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  Building responsive interfaces using HTML5, CSS3, and modern JavaScript.
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  Working with APIs, JSON data, search interfaces, and browser-based legal tools.
+                </li>
+
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  Using Git and structured development workflows for version control and project management.
+                </li>
+              </ul>
             </div>
-            <div class="flow-arrow">
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <div class="flow-step">
-              <div class="step-icon"><i class="fa-solid fa-filter"></i></div>
-              <h4>2. Regex Pattern Parsing</h4>
-              <p>Clause, party, fee, &amp; jurisdiction extraction</p>
-            </div>
-            <div class="flow-arrow">
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-            <div class="flow-step">
-              <div class="step-icon"><i class="fa-solid fa-code"></i></div>
-              <h4>3. Structured JSON Output</h4>
-              <p>Normalized data payload for API / Jinja2 rendering</p>
+
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>HTML5, CSS3 &amp; JavaScript</span>
+                  <span>90%</span>
+                </div>
+
+                <div class="progress-bar">
+                  <div class="progress" style="width: 90%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>APIs, JSON &amp; Search Interfaces</span>
+                  <span>85%</span>
+                </div>
+
+                <div class="progress-bar">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Git &amp; Development Workflow</span>
+                  <span>88%</span>
+                </div>
+
+                <div class="progress-bar">
+                  <div class="progress" style="width: 88%"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Interactive Playground -->
+        <!-- =========================
+             WORKFLOW PIPELINE
+        ========================== -->
+        <div class="pipeline-card">
+          <div class="pipeline-header">
+            <span class="section-tag">ARCHITECTURAL WORKFLOW</span>
+
+            <h3>
+              <i class="fa-solid fa-diagram-project"></i>
+              From Legal Document to Structured Data
+            </h3>
+          </div>
+
+          <div class="pipeline-flow">
+            <div class="flow-step">
+              <div class="step-icon">
+                <i class="fa-solid fa-file-pdf"></i>
+              </div>
+
+              <h4>1. Document Ingestion</h4>
+
+              <p>Read and prepare PDF, Word, or text-based legal documents for processing.</p>
+            </div>
+
+            <div class="flow-arrow">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <div class="flow-step">
+              <div class="step-icon">
+                <i class="fa-solid fa-filter"></i>
+              </div>
+
+              <h4>2. Information Extraction</h4>
+
+              <p>Identify clauses, parties, dates, monetary values, references, and other relevant fields.</p>
+            </div>
+
+            <div class="flow-arrow">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <div class="flow-step">
+              <div class="step-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+
+              <h4>3. Structured Output</h4>
+
+              <p>Convert extracted information into normalized JSON or reusable application data.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- =========================
+             INTERACTIVE PLAYGROUND
+        ========================== -->
         <div class="playground-card">
           <div class="playground-header">
-            <h3><i class="fa-solid fa-terminal"></i> Interactive Legal Engine Playground</h3>
-            <p>Test the dynamic Python &amp; JS clause parsing logic directly in your browser.</p>
+            <h3>
+              <i class="fa-solid fa-terminal"></i>
+              Interactive Legal Document Playground
+            </h3>
+
+            <p>Enter sample legal text and explore how a simple rule-based parser can identify structured information.</p>
           </div>
 
           <div class="playground-grid">
             <div class="playground-input">
-              <label for="sample-contract">Sample Legal Text Input:</label>
-              <textarea id="sample-contract" rows="6">
+              <label for="sample-contract"> Sample Legal Text Input: </label>
+
+              <textarea id="sample-contract" rows="6" aria-label="Sample legal document text">
 Party A: Apex Legal Tech Ltd.
 Party B: Global Tech Solutions Inc.
 Total Fee: $35,000 USD
 Date: 01 September 2026
 Jurisdiction: Kathmandu, Nepal</textarea
               >
-              <button id="run-parser-btn" class="btn btn-primary btn-full" style="margin-top: 12px">
-                <i class="fa-solid fa-bolt"></i> Run Parser Engine
+
+              <button id="run-parser-btn" class="btn btn-primary btn-full" style="margin-top: 12px" type="button">
+                <i class="fa-solid fa-bolt"></i>
+                Run Parser Engine
               </button>
             </div>
 
             <div class="playground-output">
-              <label>Extracted Structured JSON Output:</label>
-              <pre id="json-output"><code>Click "Run Parser Engine" to extract data...</code></pre>
+              <label for="json-output"> Extracted Structured JSON Output: </label>
+
+              <pre id="json-output"><code>Click "Run Parser Engine" to extract structured data...</code></pre>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
+    <!-- =========================
+         PROJECTS SECTION
+    ========================== -->
     <section id="projects" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">PORTFOLIO &amp; BUILDS</span>
-          <h2 class="section-title">Software Builds &amp; Tools</h2>
+          <span class="section-tag"> PORTFOLIO &amp; TECHNICAL BUILDS </span>
+
+          <h2 class="section-title">Selected Builds &amp; Experiments</h2>
         </div>
 
         <div class="filter-controls">
-          <button class="filter-btn active" data-filter="all">All Projects</button>
-          <button class="filter-btn" data-filter="python">Python Tools</button>
-          <button class="filter-btn" data-filter="js">JavaScript &amp; Web</button>
-          <button class="filter-btn" data-filter="governance">AI &amp; Governance</button>
+          <button class="filter-btn active" data-filter="all" type="button">All Projects</button>
+
+          <button class="filter-btn" data-filter="python" type="button">Python Tools</button>
+
+          <button class="filter-btn" data-filter="js" type="button">JavaScript &amp; Web</button>
+
+          <button class="filter-btn" data-filter="governance" type="button">AI &amp; Governance</button>
         </div>
 
         <div class="project-grid">
-          <!-- Project 1 -->
+          <!-- PROJECT 1 -->
           <div class="project-card" data-category="python">
             <div class="project-media">
               <img
                 src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-                alt="Python Legal Generator"
+                alt="Code editor representing a Python legal document automation project"
                 loading="lazy"
               />
+
               <div class="media-overlay">
-                <a href="#" target="_blank" class="preview-btn"><i class="fa-brands fa-github"></i> Source Code</a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="preview-btn">
+                  <i class="fa-brands fa-github"></i>
+                  Source Code
+                </a>
               </div>
             </div>
+
             <div class="project-body">
-              <span class="project-type">Python Utility</span>
+              <span class="project-type"> Portfolio Prototype </span>
+
               <h3>Legal Document Generator</h3>
+
               <p>
-                A Python backend tool that ingests structured data feeds and compiles customized legal agreements, petitions, and statutory forms
-                seamlessly.
+                A Python-based document automation prototype that combines structured inputs with reusable templates to generate consistent
+                legal-document outputs.
               </p>
-              <div class="project-tags"><span>Python 3</span> <span>Jinja2</span> <span>PDF Parsing</span></div>
+
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Jinja2</span>
+                <span>Document Processing</span>
+              </div>
             </div>
           </div>
 
-          <!-- Project 2 -->
+          <!-- PROJECT 2 -->
           <div class="project-card" data-category="js">
             <div class="project-media">
               <img
                 src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-                alt="Statutory Search Helper"
+                alt="Digital interface representing a statutory legal search application"
                 loading="lazy"
               />
+
               <div class="media-overlay">
-                <a href="#" target="_blank" class="preview-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="preview-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  Live Demo
+                </a>
               </div>
             </div>
+
             <div class="project-body">
-              <span class="project-type">Web Application</span>
+              <span class="project-type"> Web Prototype </span>
+
               <h3>Statutory Query &amp; Search Engine</h3>
+
               <p>
-                An interactive JavaScript web interface designed to search, query, filter, and cross-reference statutory acts and legal citations
-                instantly.
+                A browser-based legal search concept designed to organize, filter, and cross-reference statutory material through a focused and
+                accessible search interface.
               </p>
+
               <div class="project-tags">
-                <span>JavaScript</span> <span>HTML5/CSS3</span>
+                <span>JavaScript</span>
+                <span>HTML5/CSS3</span>
                 <span>REST API</span>
               </div>
             </div>
           </div>
 
-          <!-- Project 3 -->
+          <!-- PROJECT 3 -->
           <div class="project-card" data-category="governance">
             <div class="project-media">
               <img
                 src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-                alt="AI Compliance Framework"
+                alt="Abstract technology visual representing an AI governance framework"
                 loading="lazy"
               />
+
               <div class="media-overlay">
-                <a href="#" target="_blank" class="preview-btn"><i class="fa-solid fa-book-bookmark"></i> View Framework</a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="preview-btn">
+                  <i class="fa-solid fa-book-bookmark"></i>
+                  View Framework
+                </a>
               </div>
             </div>
+
             <div class="project-body">
-              <span class="project-type">Governance Framework</span>
+              <span class="project-type"> Research Framework </span>
+
               <h3>Algorithmic Compliance Matrix</h3>
+
               <p>
-                A technical assessment framework mapping machine learning model parameters against data privacy statutes and constitutional rights.
+                A conceptual assessment framework for examining AI and automated systems against governance principles such as accountability,
+                transparency, privacy, and legal risk.
               </p>
+
               <div class="project-tags">
-                <span>AI Ethics</span> <span>Algorithmic Audit</span>
+                <span>AI Governance</span>
+                <span>Algorithmic Audit</span>
                 <span>Legal Tech</span>
               </div>
             </div>
@@ -477,19 +694,22 @@ Jurisdiction: Kathmandu, Nepal</textarea
       </div>
     </section>
 
-    <!-- DEMOS & SYSTEM ARCHITECTURE -->
+    <!-- =========================
+         DEMOS & MEDIA
+    ========================== -->
     <section id="media" class="section bg-surface">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">SYSTEM ARCHITECTURE &amp; WORKFLOWS</span>
-          <h2 class="section-title">Legal Tech Engineering Workflows</h2>
+          <span class="section-tag"> SYSTEMS &amp; WORKFLOWS </span>
+
+          <h2 class="section-title">Legal Technology in Practice</h2>
         </div>
 
-        <!-- 2x2 Responsive Grid Layout -->
-        <div class="showcase-grid-2x2">
-          <!-- Card 1: Terminal Parser Engine -->
-          <div class="showcase-card">
+        <div class="media-grid-4">
+          <!-- CARD 1 -->
+          <div class="media-card-v2">
             <div class="card-badge">Python Engine</div>
+
             <div class="terminal-preview-container">
               <div class="terminal-header">
                 <div class="terminal-dots">
@@ -497,308 +717,280 @@ Jurisdiction: Kathmandu, Nepal</textarea
                   <span class="dot yellow"></span>
                   <span class="dot green"></span>
                 </div>
-                <span class="terminal-title">parser_engine.py</span>
+
+                <span class="terminal-title"> parser_engine.py </span>
               </div>
+
               <div class="terminal-body">
-                <pre><code><span class="code-comment"># Extract key clauses &amp; metadata</span>
-<span class="code-keyword">import</span> legal_tech <span class="code-keyword">as</span> lt
+                <pre><code><span class="code-comment"># Extract key legal information</span>
+<span class="code-keyword">document</span> = parser.load(<span class="code-str">"contract.pdf"</span>)
 
-engine = lt.Engine(domain=<span class="code-str">"Statutory"</span>)
-doc = engine.load(<span class="code-str">"sample_contract.pdf"</span>)
-parties = doc.extract_parties()
-jurisdiction = doc.get_clause(<span class="code-str">"Jurisdiction"</span>)
+parties = document.extract_parties()
+clauses = document.extract_clauses()
 
-<span class="code-output">&gt;&gt;&gt; Status: COMPLIANT | Verification: 100%</span></code></pre>
+<span class="code-output">&gt;&gt;&gt; Parsing complete</span>
+<span class="code-output">&gt;&gt;&gt; Ready for validation</span></code></pre>
               </div>
             </div>
+
             <div class="media-caption">
-              <h4><i class="fa-solid fa-code"></i> Contract Parsing &amp; Extraction Engine</h4>
-              <p>Extracts parties, execution dates, jurisdiction clauses, and compliance metrics from unstructured legal documents.</p>
+              <h4>
+                <i class="fa-solid fa-code"></i>
+                Contract Parsing Engine
+              </h4>
+
+              <p>
+                Demonstrates how unstructured legal documents can be processed to identify parties, clauses, dates, and other structured information.
+              </p>
             </div>
           </div>
 
-          <!-- Card 2: Interactive Compliance Flowchart -->
-          <div class="showcase-card">
+          <!-- CARD 2 -->
+          <div class="media-card-v2">
             <div class="card-badge">Architecture</div>
+
             <div class="workflow-flow-container">
               <div class="flow-node">
                 <i class="fa-solid fa-file-contract"></i>
-                <span>Unstructured PDF / Raw Text</span>
+                <span>Raw Document</span>
               </div>
-              <div class="flow-connector"><i class="fa-solid fa-chevron-down"></i></div>
+
+              <div class="flow-connector">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+
               <div class="flow-node highlight">
                 <i class="fa-solid fa-gears"></i>
-                <span>Regex &amp; Rule Validation Engine</span>
+                <span>Rule Processing</span>
               </div>
-              <div class="flow-connector"><i class="fa-solid fa-chevron-down"></i></div>
+
+              <div class="flow-connector">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+
               <div class="flow-node success">
-                <i class="fa-solid fa-file-invoice"></i>
-                <span>Structured JSON &amp; Risk Metrics</span>
+                <i class="fa-solid fa-file-code"></i>
+                <span>Structured Output</span>
               </div>
             </div>
+
             <div class="media-caption">
-              <h4><i class="fa-solid fa-diagram-project"></i> Statutory Audit Pipeline</h4>
-              <p>End-to-end data transformation pipeline converting raw text to structured legal compliance outputs.</p>
+              <h4>
+                <i class="fa-solid fa-diagram-project"></i>
+                Legal Data Processing Pipeline
+              </h4>
+
+              <p>
+                A conceptual workflow showing how legal text can move from document ingestion through rule processing into structured application
+                data.
+              </p>
             </div>
           </div>
 
-          <!-- Card 3: Research & Citation Spotlight -->
-          <div class="showcase-card">
+          <!-- CARD 3 -->
+          <div class="media-card-v2">
             <div class="card-badge">Legal Research</div>
+
             <div class="research-spotlight-container">
-              <div class="brief-tag"><i class="fa-solid fa-scroll"></i> Research Brief Spotlight</div>
-              <h5 class="brief-title">Algorithmic Governance &amp; Constitutional Due Process</h5>
-              <p class="brief-meta">Q1 Journal Working Paper • Tech Governance Framework</p>
+              <div class="brief-tag">
+                <i class="fa-solid fa-scroll"></i>
+                Research Spotlight
+              </div>
+
+              <h5 class="brief-title">Algorithmic Governance &amp; Constitutional Law</h5>
+
+              <p class="brief-meta">Working Paper • Technology Governance</p>
+
               <div class="brief-snippet">
-                "Examining procedural due process and constitutional safeguards in public sector decision-making algorithms."
+                Examining procedural fairness, accountability, transparency, and legal safeguards in automated decision-making.
               </div>
             </div>
+
             <div class="media-caption">
-              <h4><i class="fa-solid fa-book-bookmark"></i> Academic Research Brief</h4>
-              <p>Publication focusing on statutory compliance, due process, and algorithmic accountability in public systems.</p>
+              <h4>
+                <i class="fa-solid fa-book-bookmark"></i>
+                Research Brief
+              </h4>
+
+              <p>Exploring the relationship between emerging automated systems, constitutional principles, and accountable decision-making.</p>
             </div>
           </div>
 
-          <!-- Card 4: Visual Regulatory Dashboard -->
-          <div class="showcase-card">
-            <div class="card-badge">Data Visuals</div>
+          <!-- CARD 4 -->
+          <div class="media-card-v2">
+            <div class="card-badge">Data Visualisation</div>
+
             <div class="video-container-v2">
-              <video controls poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=800&amp;q=80">
+              <video
+                controls
+                preload="metadata"
+                poster="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+              >
                 <source src="demo-preview.mp4" type="video/mp4" />
+
                 Your browser does not support the video tag.
               </video>
             </div>
+
             <div class="media-caption">
-              <h4><i class="fa-solid fa-chart-line"></i> Statutory Data &amp; Regulatory Dashboard</h4>
-              <p>Real-time visualization tracking regulatory updates, statutory metrics, and legal compliance parameters.</p>
+              <h4>
+                <i class="fa-solid fa-chart-line"></i>
+                Regulatory Dashboard
+              </h4>
+
+              <p>
+                A visual dashboard concept for presenting regulatory information, legal updates, and structured compliance data in a more accessible
+                format.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- RESEARCH & WORKING PAPERS -->
+    <!-- =========================
+         RESEARCH SECTION
+    ========================== -->
     <section id="publications" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">LEGAL ANALYSIS &amp; WORKING PAPERS</span>
-          <h2 class="section-title">Research Briefs &amp; Statutory Notes</h2>
+          <span class="section-tag"> LEGAL ANALYSIS &amp; TECHNICAL RESEARCH </span>
+
+          <h2 class="section-title">Research, Briefs &amp; Technical Notes</h2>
         </div>
 
-        <!-- 2x2 Responsive Grid Layout -->
-        <div class="showcase-grid-2x2">
-          <!-- Card 1: Algorithmic Accountability Working Paper -->
-          <article class="pub-card-v2">
-            <div class="pub-card-header">
-              <span class="pub-type-badge working-paper"> <i class="fa-solid fa-file-signature"></i> Working Paper </span>
-              <span class="pub-status-tag">Forthcoming Journal Article</span>
-            </div>
-            <div class="pub-card-body">
-              <h3 class="pub-card-title">Algorithmic Accountability &amp; Constitutional Safeguards</h3>
-              <p class="pub-card-abstract">
-                A critical examination of automated administrative decisions, assessing constitutional due process, liability allocation, and judicial
-                review mechanisms in algorithmic systems.
-              </p>
-            </div>
-            <div class="pub-card-tags">
-              <span class="tag">Constitutional Law</span>
-              <span class="tag">AI Governance</span>
-              <span class="tag">Administrative Law</span>
-            </div>
-            <div class="pub-card-footer">
-              <a href="#contact" class="pub-action-btn">
-                <span>Request Abstract &amp; Outline</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card 2: Property & Statutory Law Analysis -->
-          <article class="pub-card-v2">
-            <div class="pub-card-header">
-              <span class="pub-type-badge statutory-note"> <i class="fa-solid fa-gavel"></i> Statutory Analysis </span>
-              <span class="pub-status-tag">Legal Brief</span>
-            </div>
-            <div class="pub-card-body">
-              <h3 class="pub-card-title">Document Annulment &amp; Ancestral Property Rights</h3>
-              <p class="pub-card-abstract">
-                Practical statutory evaluation of civil procedures governing <em>Likhit Badar</em> (cancellation of documents) and partition claims
-                among coparceners under current Civil Code provisions.
-              </p>
-            </div>
-            <div class="pub-card-tags">
-              <span class="tag">Property Law</span>
-              <span class="tag">Civil Code</span>
-              <span class="tag">Litigation Practice</span>
-            </div>
-            <div class="pub-card-footer">
-              <a href="#contact" class="pub-action-btn">
-                <span>Read Summary Note</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card 3: Judicial Exam & Electoral Analytics -->
-          <article class="pub-card-v2">
-            <div class="pub-card-header">
-              <span class="pub-type-badge case-study"> <i class="fa-solid fa-chart-pie"></i> Analytical Brief </span>
-              <span class="pub-status-tag">Electoral Metrics</span>
-            </div>
-            <div class="pub-card-body">
-              <h3 class="pub-card-title">Proportional Representation &amp; Electoral Calculation Formulas</h3>
-              <p class="pub-card-abstract">
-                A data-driven breakdown evaluating mathematical threshold formulas, seat allocation metrics, and electoral system calculations in
-                parliamentary governance.
-              </p>
-            </div>
-            <div class="pub-card-tags">
-              <span class="tag">Public Law</span>
-              <span class="tag">Electoral Systems</span>
-              <span class="tag">Data Analytics</span>
-            </div>
-            <div class="pub-card-footer">
-              <a href="#contact" class="pub-action-btn">
-                <span>Explore Analytical Model</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Card 4: Legal Tech & Contract Automation Guide -->
-          <article class="pub-card-v2">
-            <div class="pub-card-header">
-              <span class="pub-type-badge tech-guide"> <i class="fa-solid fa-code"></i> Tech Whitepaper </span>
-              <span class="pub-status-tag">Software Architecture</span>
-            </div>
-            <div class="pub-card-body">
-              <h3 class="pub-card-title">Structured Contract Parsing via Python Legal Engines</h3>
-              <p class="pub-card-abstract">
-                Technical blueprint detailing rule-based Regex and NLP parsing engines engineered to convert unstructured contract clauses into
-                standardized, searchable JSON outputs.
-              </p>
-            </div>
-            <div class="pub-card-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Contract Automation</span>
-              <span class="tag">Legal Tech</span>
-            </div>
-            <div class="pub-card-footer">
-              <a href="#contact" class="pub-action-btn">
-                <span>View Technical Architecture</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- LEGAL RESEARCH & STATUTORY ANALYSIS -->
-    <section id="publications" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">LEGAL ANALYSIS &amp; WORKING PAPERS</span>
-          <h2 class="section-title">Research Briefs &amp; Statutory Notes</h2>
-        </div>
-
-        <!-- 4-Card Responsive Grid Layout -->
         <div class="publications-grid-4">
-          <!-- Card 1: Algorithmic Accountability Working Paper -->
+          <!-- RESEARCH 1 -->
           <article class="pub-card-v2">
             <div class="pub-card-header">
-              <span class="pub-type-badge working-paper"> <i class="fa-solid fa-file-signature"></i> Working Paper </span>
-              <span class="pub-status-tag">Forthcoming Q2 2026</span>
+              <span class="pub-type-badge working-paper">
+                <i class="fa-solid fa-file-signature"></i>
+                Working Paper
+              </span>
+
+              <span class="pub-status-tag"> In Development </span>
             </div>
+
             <div class="pub-card-body">
               <h3 class="pub-card-title">Algorithmic Accountability &amp; Constitutional Safeguards</h3>
+
               <p class="pub-card-abstract">
-                Critical evaluation of automated administrative decisions, examining constitutional due process, liability allocation, and judicial
-                review mechanisms.
+                An examination of automated administrative decision-making through the lens of procedural fairness, accountability, liability,
+                transparency, and judicial oversight.
               </p>
             </div>
+
             <div class="pub-card-tags">
               <span class="tag">Constitutional Law</span>
               <span class="tag">AI Governance</span>
             </div>
+
             <div class="pub-card-footer">
               <a href="#contact" class="pub-action-btn">
                 <span>Request Abstract</span>
+
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </article>
 
-          <!-- Card 2: Property & Statutory Law Analysis -->
+          <!-- RESEARCH 2 -->
           <article class="pub-card-v2">
             <div class="pub-card-header">
-              <span class="pub-type-badge statutory-note"> <i class="fa-solid fa-gavel"></i> Statutory Analysis </span>
-              <span class="pub-status-tag">Legal Brief</span>
+              <span class="pub-type-badge statutory-note">
+                <i class="fa-solid fa-gavel"></i>
+                Statutory Analysis
+              </span>
+
+              <span class="pub-status-tag"> Legal Brief </span>
             </div>
+
             <div class="pub-card-body">
               <h3 class="pub-card-title">Document Annulment &amp; Ancestral Property Rights</h3>
+
               <p class="pub-card-abstract">
-                Practical examination of statutory frameworks governing <em>Likhit Badar</em> (document cancellation) and coparcenary partition under
-                Civil Code provisions.
+                A practical legal analysis of issues surrounding document cancellation, ancestral property, partition, and related civil-law
+                principles, with emphasis on statutory interpretation and practical legal remedies.
               </p>
             </div>
+
             <div class="pub-card-tags">
               <span class="tag">Property Law</span>
-              <span class="tag">Civil Code</span>
+              <span class="tag">Civil Law</span>
             </div>
+
             <div class="pub-card-footer">
               <a href="#contact" class="pub-action-btn">
-                <span>Read Summary</span>
+                <span>Request Summary</span>
+
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </article>
 
-          <!-- Card 3: Judicial Exam & Electoral Analytics -->
+          <!-- RESEARCH 3 -->
           <article class="pub-card-v2">
             <div class="pub-card-header">
-              <span class="pub-type-badge case-study"> <i class="fa-solid fa-chart-pie"></i> Analytical Brief </span>
-              <span class="pub-status-tag">Electoral Metrics</span>
+              <span class="pub-type-badge case-study">
+                <i class="fa-solid fa-chart-pie"></i>
+                Analytical Brief
+              </span>
+
+              <span class="pub-status-tag"> Electoral Analysis </span>
             </div>
+
             <div class="pub-card-body">
               <h3 class="pub-card-title">Proportional Representation &amp; Electoral Calculations</h3>
+
               <p class="pub-card-abstract">
-                A data-driven breakdown of seat allocation formulas, electoral threshold mechanics, and proportional representation metrics in
-                parliamentary systems.
+                A structured examination of proportional representation, seat-allocation methods, electoral thresholds, and the mathematical
+                principles used to translate votes into legislative representation.
               </p>
             </div>
+
             <div class="pub-card-tags">
               <span class="tag">Public Law</span>
-              <span class="tag">Electoral Tech</span>
+              <span class="tag">Electoral Systems</span>
             </div>
+
             <div class="pub-card-footer">
               <a href="#contact" class="pub-action-btn">
-                <span>Explore Analytics</span>
+                <span>Explore Analysis</span>
+
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </article>
 
-          <!-- Card 4: Legal Tech & Contract Automation Guide -->
+          <!-- RESEARCH 4 -->
           <article class="pub-card-v2">
             <div class="pub-card-header">
-              <span class="pub-type-badge tech-guide"> <i class="fa-solid fa-code"></i> Tech Whitepaper </span>
-              <span class="pub-status-tag">Software Guide</span>
+              <span class="pub-type-badge tech-guide">
+                <i class="fa-solid fa-code"></i>
+                Technical Note
+              </span>
+
+              <span class="pub-status-tag"> Legal Automation </span>
             </div>
+
             <div class="pub-card-body">
-              <h3 class="pub-card-title">Structured Contract Parsing via Python Automation</h3>
+              <h3 class="pub-card-title">Structured Contract Parsing with Python</h3>
+
               <p class="pub-card-abstract">
-                Technical blueprint detailing rule-based Regex and NLP parsing engines to convert unstructured legal agreements into standardized JSON
-                outputs.
+                A technical exploration of rule-based parsing, regular expressions, document processing, and structured data techniques for
+                transforming unstructured agreements into reusable JSON-based representations.
               </p>
             </div>
+
             <div class="pub-card-tags">
               <span class="tag">Python</span>
               <span class="tag">Contract Automation</span>
             </div>
+
             <div class="pub-card-footer">
               <a href="#contact" class="pub-action-btn">
                 <span>View Architecture</span>
+
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
@@ -807,25 +999,36 @@ jurisdiction = doc.get_clause(<span class="code-str">"Jurisdiction"</span>)
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- =========================
+         CONTACT SECTION
+    ========================== -->
     <section id="contact" class="section bg-surface">
       <div class="container">
         <div class="contact-wrapper">
+          <!-- Contact Information -->
           <div class="contact-info">
-            <span class="section-tag">GET IN TOUCH</span>
-            <h2>Let's Collaborate on Legal Tech Solutions</h2>
-            <p>Open for legal tech engineering, custom software builds, academic research, and strategic compliance consulting.</p>
+            <span class="section-tag"> GET IN TOUCH </span>
+
+            <h2>Let's Build Better Legal Technology</h2>
+
+            <p>
+              Interested in legal automation, document intelligence, software development, AI governance, legal research, or technology-focused
+              projects? Get in touch to discuss an idea, collaboration, or research opportunity.
+            </p>
 
             <div class="contact-details">
               <div class="contact-item">
                 <i class="fa-solid fa-envelope"></i>
+
                 <div>
                   <span>Email Address</span>
                   <p>your.email@example.com</p>
                 </div>
               </div>
+
               <div class="contact-item">
                 <i class="fa-solid fa-location-dot"></i>
+
                 <div>
                   <span>Location</span>
                   <p>Kathmandu, Nepal</p>
@@ -834,50 +1037,89 @@ jurisdiction = doc.get_clause(<span class="code-str">"Jurisdiction"</span>)
             </div>
 
             <div class="social-links">
-              <a href="https://linkedin.com/in/YOUR-PROFILE" target="_blank" aria-label="LinkedIn" class="social-btn linkedin">
+              <a
+                href="https://linkedin.com/in/YOUR-PROFILE"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                class="social-btn linkedin"
+              >
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
-              <a href="https://github.com/YOUR-USERNAME" target="_blank" aria-label="GitHub" class="social-btn github">
+
+              <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-btn github">
                 <i class="fa-brands fa-github"></i>
               </a>
-              <a href="https://x.com/YOUR-HANDLE" target="_blank" aria-label="X (Twitter)" class="social-btn x-twitter">
+
+              <a href="https://x.com/YOUR-HANDLE" target="_blank" rel="noopener noreferrer" aria-label="X" class="social-btn x-twitter">
                 <i class="fa-brands fa-x-twitter"></i>
               </a>
+
               <a href="mailto:your.email@example.com" aria-label="Email" class="social-btn email">
                 <i class="fa-solid fa-envelope"></i>
               </a>
             </div>
           </div>
 
+          <!-- Contact Form -->
           <div class="contact-form-card">
             <form id="portfolio-form">
               <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" required placeholder="John Doe" />
+                <label for="name"> Your Name </label>
+
+                <input type="text" id="name" name="name" autocomplete="name" required placeholder="John Doe" />
               </div>
+
               <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" required placeholder="john@example.com" />
+                <label for="email"> Your Email </label>
+
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="john@example.com" />
               </div>
+
               <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" rows="4" required placeholder="Describe your legal tech project or inquiry..."></textarea>
+                <label for="message"> Message </label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  placeholder="Tell me briefly about your project, research idea, or inquiry..."
+                ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-full"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
-              <div id="form-status" class="form-status"></div>
+
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fa-solid fa-paper-plane"></i>
+                Send Message
+              </button>
+
+              <div id="form-status" class="form-status" aria-live="polite"></div>
+
+              <p class="form-note">
+                <i class="fa-solid fa-lock"></i>
+                Please do not include confidential, privileged, or sensitive legal information in this form.
+              </p>
             </form>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2026 Legal Tech Advocate &amp; Specialist. Built with native HTML5, CSS3, &amp; JavaScript.</p>
+        <p>&copy; 2026 Legal Tech Advocate &amp; Specialist. Built with HTML5, CSS3, and JavaScript.</p>
+
+        <p class="footer-disclaimer">
+          This portfolio is provided for professional, research, and informational purposes. Nothing on this website constitutes legal advice unless
+          expressly stated otherwise.
+        </p>
       </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
   </body>
 </html>
