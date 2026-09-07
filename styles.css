@@ -666,8 +666,98 @@ a {
 }
 
 /* ==========================================================================
-   ABOUT
+   ABOUT INTRODUCTION
    ========================================================================== */
+
+.about-header {
+  margin-bottom: 2.5rem;
+}
+
+/* Main About container */
+.about-intro-card {
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  background: var(--bg-card);
+}
+
+/* Main heading */
+.about-intro-heading {
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+.about-mini-label {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+
+  color: var(--accent-blue);
+  font-family: var(--font-code);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-intro-heading h3 {
+  margin: 0 0 0.9rem;
+
+  color: var(--text-heading);
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2vw, 1.75rem);
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.about-intro-heading > p {
+  margin: 0;
+
+  color: var(--text-body);
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+/* Two nested content blocks */
+.about-intro-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.about-intro-block {
+  min-width: 0;
+  padding: 1.5rem;
+
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  background: var(--bg-surface);
+}
+
+.about-intro-block p {
+  margin: 0;
+
+  color: var(--text-body);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .about-intro-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro-card {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .about-intro-block {
+    padding: 1.25rem;
+  }
+}
 
 .about-grid {
   display: grid;
@@ -729,6 +819,22 @@ a {
 
   font-size: 0.91rem;
   line-height: 1.75;
+}
+
+.about-header {
+  max-width: 950px;
+}
+
+.about-intro {
+  max-width: 900px;
+  margin-top: 16px;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  line-height: 1.8;
+  color: var(--text-body);
+}
+
+.about-header .section-title {
+  margin-bottom: 20px;
 }
 
 /* ==========================================================================
